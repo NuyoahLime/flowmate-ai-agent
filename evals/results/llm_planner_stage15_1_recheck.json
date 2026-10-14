@@ -1,0 +1,146 @@
+{
+  "planner_name": "LLMPlanner",
+  "case_count": 5,
+  "provider_call_count": 5,
+  "records": [
+    {
+      "case_id": "commute-006",
+      "dataset": "evals/planner_eval_v1.json",
+      "status": "previously_failed_now_passed",
+      "success": true,
+      "failure_stage": null,
+      "failure_type": null,
+      "expected_supported": true,
+      "predicted_supported": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "schema_valid": true,
+      "error": null
+    },
+    {
+      "case_id": "boundary-supported-002",
+      "dataset": "evals/planner_boundary_v1.json",
+      "status": "still_failed",
+      "success": false,
+      "failure_stage": "capability_or_unsupported",
+      "failure_type": "scenario_error",
+      "expected_supported": true,
+      "predicted_supported": false,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "predicted_tools": [],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_arguments": {},
+      "schema_valid": false,
+      "error": "无法确定出发地点和出发时间。用户仅提到自驾去公司，未明确起点（如家或当前位置），也未说明具体出发时间，且不能根据规则推断为“现在”，因此无法满足导航工具的必填参数。"
+    },
+    {
+      "case_id": "boundary-supported-004",
+      "dataset": "evals/planner_boundary_v1.json",
+      "status": "still_failed",
+      "success": false,
+      "failure_stage": "capability_or_unsupported",
+      "failure_type": "scenario_error",
+      "expected_supported": true,
+      "predicted_supported": false,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "predicted_tools": [],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_arguments": {},
+      "schema_valid": false,
+      "error": "导航工具需要 departure_time 参数，但用户未指定出行时间，且无法从请求中可靠推断（如明早、早上通勤等），因此无法完成路线查询。"
+    },
+    {
+      "case_id": "boundary-supported-005",
+      "dataset": "evals/planner_boundary_v1.json",
+      "status": "still_failed",
+      "success": false,
+      "failure_stage": "capability_or_unsupported",
+      "failure_type": "scenario_error",
+      "expected_supported": true,
+      "predicted_supported": false,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "predicted_tools": [],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_arguments": {},
+      "schema_valid": false,
+      "error": "The request asks for an estimated commute time but does not specify a departure time. The navigation_tool requires a departure_time argument, and no canonical mapping applies to infer one from the user's wording."
+    },
+    {
+      "case_id": "minimality-navigation-004",
+      "dataset": "evals/planner_minimality_v1.json",
+      "status": "still_failed",
+      "success": false,
+      "failure_stage": "response_extraction",
+      "failure_type": "provider_empty_output",
+      "expected_supported": true,
+      "predicted_supported": false,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "predicted_tools": [],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_arguments": {},
+      "schema_valid": false,
+      "error": "DeepSeek response content was empty."
+    }
+  ],
+  "note": "Planner-only recheck. No TaskExecutor, StepExecutor, ToolExecutor, or Tool execution."
+}

@@ -1,0 +1,862 @@
+{
+  "planner_name": "LLMPlanner",
+  "dataset": "evals\\planner_eval_v1.json",
+  "max_attempts_per_case": 2,
+  "metrics": {
+    "cases": 22,
+    "scenario_accuracy": 0.9545454545454546,
+    "supported_recall": 1.0,
+    "unsupported_recall": 0.9166666666666666,
+    "tool_selection_accuracy": 1.0,
+    "parameter_accuracy": 0.9800000000000001,
+    "parameter_completeness": 1.0,
+    "unsupported_accuracy": 0.9166666666666666,
+    "schema_valid_rate": 1.0,
+    "extra_tool_rate": 0.0,
+    "retry_cases": 0,
+    "retry_recovery_rate": null,
+    "total_provider_attempts": 22,
+    "average_provider_attempts_per_case": 1.0
+  },
+  "results": [
+    {
+      "case_id": "commute-001",
+      "category": "morning_commute",
+      "failure_type": "parameter_value_error",
+      "planner_name": "LLMPlanner",
+      "user_input": "我明天早上八点半在公司开会，帮我安排好明早出门",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 0.8,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "company",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "commute-002",
+      "category": "morning_commute",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明早要去公司开会，帮我安排出门",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "commute-003",
+      "category": "morning_commute",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明天上班帮我安排一下通勤",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "commute-004",
+      "category": "morning_commute",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明早去公司开会，安排一下出门",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "commute-005",
+      "category": "morning_commute",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明天早上上班，帮我安排通勤",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "commute-006",
+      "category": "morning_commute",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明天公司开会前帮我安排出门",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "commute-007",
+      "category": "morning_commute",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明早上班的通勤帮我安排一下",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "commute-008",
+      "category": "morning_commute",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明天去公司开会，帮我安排一下明早出门",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "commute-009",
+      "category": "morning_commute",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我安排明天上班通勤",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "commute-010",
+      "category": "morning_commute",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明早出门去公司，帮我安排通勤",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "unsupported-smart-home-001",
+      "category": "unsupported_smart_home",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我把客厅灯关掉",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "无法控制客厅灯等设备，当前可用工具仅支持天气查询、导航规划和日历查询。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "unsupported-smart-home-002",
+      "category": "unsupported_smart_home",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "回家前打开卧室空调",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "当前可用工具仅支持天气查询、导航计算和日历读取，无法控制卧室空调等家居设备。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "unsupported-smart-home-003",
+      "category": "unsupported_smart_home",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把家里的灯调成适合学习的亮度",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "当前可用工具仅支持天气查询、导航规划和日历查询，无法控制或调节家中的灯光设备。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "unsupported-smart-home-004",
+      "category": "unsupported_smart_home",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "孩子回家后打开书房灯",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "没有可用的工具来控制家庭设备（如打开书房灯）。可用的工具仅支持查询天气、导航和日历信息，无法执行物理操作。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "unsupported-vehicle-001",
+      "category": "unsupported_vehicle",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我把车开到公司门口",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "用户要求将车开到公司门口，这属于对车辆的实际物理控制（驾驶操作），而可用工具中 navigation_tool 只能计算路线和规划信息，无法驾驶或移动车辆。因此该任务超出工具能力范围，不支持。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "unsupported-vehicle-002",
+      "category": "unsupported_vehicle",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "检查一下我的车还剩多少油",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "无法检查车辆油量，因为可用工具仅限于天气查询、路线规划和日历查询，没有提供车辆状态或燃油量数据的能力。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "unsupported-vehicle-003",
+      "category": "unsupported_vehicle",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我远程启动汽车",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "远程启动汽车属于对车辆的实际物理控制操作，当前可用工具仅支持信息查询与规划，无法执行此类控制操作。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "unsupported-calendar-001",
+      "category": "unsupported_calendar",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把下周一下午三点的会议加到日历",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "请求是向日历添加会议，属于日历写入操作。calendar_tool 仅支持只读查询，无法创建、修改或删除日历事件，因此无法执行该请求。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "unsupported-calendar-002",
+      "category": "unsupported_calendar",
+      "failure_type": "scenario_error",
+      "planner_name": "LLMPlanner",
+      "user_input": "查一下我下个月有哪些安排",
+      "expected_supported": false,
+      "predicted_supported": true,
+      "scenario_correct": false,
+      "tool_selection_correct": false,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "next month"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "unsupported-calendar-003",
+      "category": "unsupported_calendar",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "取消明天上午的日历会议",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "取消或修改日历事件属于日历写入操作，当前可用工具均为只读，无法执行取消会议的操作。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "unsupported-notification-001",
+      "category": "unsupported_notification",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "晚上八点提醒我给妈妈打电话",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "提醒功能需要创建通知或日程，但可用工具中天气、导航和日历（只读）均不支持创建提醒或发送通知。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "unsupported-notification-002",
+      "category": "unsupported_notification",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明早七点发通知叫我起床",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "发送通知、提醒或闹钟等操作超出了可用工具的能力范围，这些工具无法发送通知或设置提醒。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    }
+  ],
+  "note": "Planner-only eval with bounded provider retry. No Task or Tool execution."
+}

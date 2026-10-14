@@ -1,0 +1,376 @@
+[
+  {
+    "id": "v3-weather-001",
+    "category": "weather_supported",
+    "user_input": "明天会下雨吗？",
+    "supported": true,
+    "expected_tools": ["weather_tool"],
+    "expected_arguments": {"weather_tool": {"location": "current_city", "date": "tomorrow"}},
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "v3-weather-002",
+    "category": "weather_supported",
+    "user_input": "看看明天本地天气",
+    "supported": true,
+    "expected_tools": ["weather_tool"],
+    "expected_arguments": {"weather_tool": {"location": "current_city", "date": "tomorrow"}},
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "v3-weather-003",
+    "category": "weather_supported",
+    "user_input": "查询上海明天的天气",
+    "supported": true,
+    "expected_tools": ["weather_tool"],
+    "expected_arguments": {"weather_tool": {"location": "Shanghai", "date": "tomorrow"}},
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "v3-navigation-001",
+    "category": "navigation_supported",
+    "user_input": "帮我规划去公司的路线",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {"navigation_tool": {"origin": "home", "destination": "company", "departure_time": "tomorrow morning"}},
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "v3-navigation-002",
+    "category": "navigation_supported",
+    "user_input": "我自己开车去公司，帮我规划路线",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {"navigation_tool": {"origin": "home", "destination": "company", "departure_time": "tomorrow morning"}},
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "commute-001",
+    "category": "navigation_supported",
+    "user_input": "我明天早上八点半在公司开会，帮我安排好明早出门",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {"location": "current_city", "date": "tomorrow"},
+      "navigation_tool": {"origin": "home", "destination": "company", "departure_time": "tomorrow 08:30"}
+    },
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "v3-navigation-explicit-constraints-001",
+    "category": "navigation_supported",
+    "user_input": "我明天9点从心理所出发去人民广场",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "心理所",
+        "destination": "人民广场",
+        "departure_time": "tomorrow 09:00"
+      }
+    },
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "v3-navigation-explicit-constraints-002",
+    "category": "navigation_supported",
+    "user_input": "我明天下午6点从学校出发去公司",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "学校",
+        "destination": "company",
+        "departure_time": "tomorrow 18:00"
+      }
+    },
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "v3-calendar-001",
+    "category": "calendar_read_supported",
+    "user_input": "看看明天的会议安排",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {"calendar_tool": {"date": "tomorrow"}},
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "unsupported-calendar-002",
+    "category": "calendar_read_supported",
+    "user_input": "查一下我下个月有哪些安排",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {"calendar_tool": {"date": "next month"}},
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "v3-calendar-003",
+    "category": "calendar_read_supported",
+    "user_input": "查一下明天上午的日程",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {"calendar_tool": {"date": "tomorrow", "start_time": "06:00", "end_time": "12:00"}},
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "v3-calendar-004",
+    "category": "calendar_read_supported",
+    "user_input": "查看明天的会议，并帮我规划从家去公司的路线",
+    "supported": true,
+    "expected_tools": ["calendar_tool", "navigation_tool"],
+    "expected_arguments": {
+      "calendar_tool": {"date": "tomorrow"},
+      "navigation_tool": {"origin": "home", "destination": "company", "departure_time": "tomorrow morning"}
+    },
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "v3-notification-001",
+    "category": "notification_immediate_supported",
+    "user_input": "现在给我发通知，标题是 Task done，内容是 Task completed",
+    "supported": true,
+    "expected_tools": ["notification_tool"],
+    "expected_arguments": {"notification_tool": {"title": "Task done", "message": "Task completed", "channel": "mobile"}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "v3-notification-002",
+    "category": "notification_immediate_supported",
+    "user_input": "马上发一条手机通知，标题 Route ready，内容 Commute route is ready",
+    "supported": true,
+    "expected_tools": ["notification_tool"],
+    "expected_arguments": {"notification_tool": {"title": "Route ready", "message": "Commute route is ready", "channel": "mobile"}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "v3-notification-003",
+    "category": "notification_immediate_supported",
+    "user_input": "通知我，标题 Calendar checked，内容 Calendar query finished",
+    "supported": true,
+    "expected_tools": ["notification_tool"],
+    "expected_arguments": {"notification_tool": {"title": "Calendar checked", "message": "Calendar query finished", "channel": "mobile"}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "unsupported-smart-home-001",
+    "category": "smart_home_supported",
+    "user_input": "帮我把客厅灯关掉",
+    "supported": true,
+    "expected_tools": ["smart_home_tool"],
+    "expected_arguments": {"smart_home_tool": {"device_id": "living-room-light", "device_type": "light", "action": "turn_off"}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "v3-smart-home-002",
+    "category": "smart_home_supported",
+    "user_input": "把客厅灯打开",
+    "supported": true,
+    "expected_tools": ["smart_home_tool"],
+    "expected_arguments": {"smart_home_tool": {"device_id": "living-room-light", "device_type": "light", "action": "turn_on"}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "v3-smart-home-003",
+    "category": "smart_home_supported",
+    "user_input": "打开卧室空调",
+    "supported": true,
+    "expected_tools": ["smart_home_tool"],
+    "expected_arguments": {"smart_home_tool": {"device_id": "bedroom-ac", "device_type": "air_conditioner", "action": "turn_on"}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "v3-smart-home-004",
+    "category": "smart_home_supported",
+    "user_input": "关闭卧室空调",
+    "supported": true,
+    "expected_tools": ["smart_home_tool"],
+    "expected_arguments": {"smart_home_tool": {"device_id": "bedroom-ac", "device_type": "air_conditioner", "action": "turn_off"}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "v3-smart-home-005",
+    "category": "smart_home_supported",
+    "user_input": "把卧室空调调到24度",
+    "supported": true,
+    "expected_tools": ["smart_home_tool"],
+    "expected_arguments": {"smart_home_tool": {"device_id": "bedroom-ac", "device_type": "air_conditioner", "action": "set_temperature", "value": 24}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "v3-vehicle-001",
+    "category": "vehicle_supported",
+    "user_input": "看看我的车是不是锁着",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "get_status"}},
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "v3-vehicle-002",
+    "category": "vehicle_supported",
+    "user_input": "打开我车里的空调",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "start_climate"}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "v3-vehicle-003",
+    "category": "vehicle_supported",
+    "user_input": "把车内空调打开并设为24度",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "start_climate", "temperature": 24}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "v3-vehicle-004",
+    "category": "vehicle_supported",
+    "user_input": "把车里的空调关掉",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "stop_climate"}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "v3-vehicle-005",
+    "category": "vehicle_supported",
+    "user_input": "把我的车锁上",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "lock"}},
+    "expected_risk_level": "HIGH",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "v3-vehicle-006",
+    "category": "vehicle_supported",
+    "user_input": "把我的车解锁",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "unlock"}},
+    "expected_risk_level": "HIGH",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "unsupported-notification-001",
+    "category": "scheduled_automation_unsupported",
+    "user_input": "晚上八点提醒我给妈妈打电话",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-notification-002",
+    "category": "scheduled_automation_unsupported",
+    "user_input": "明早七点发通知叫我起床",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-smart-home-002",
+    "category": "conditional_automation_unsupported",
+    "user_input": "回家前打开卧室空调",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-smart-home-004",
+    "category": "conditional_automation_unsupported",
+    "user_input": "孩子回家后打开书房灯",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "v3-unsupported-smart-home-001",
+    "category": "unsupported_smart_home",
+    "user_input": "把窗帘关上",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-smart-home-003",
+    "category": "unsupported_smart_home",
+    "user_input": "把家里的灯调成适合学习的亮度",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "v3-unsupported-smart-home-003",
+    "category": "unsupported_smart_home",
+    "user_input": "确认我家客厅灯现在真的已经关了",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-vehicle-001",
+    "category": "unsupported_vehicle_movement",
+    "user_input": "帮我把车开到公司门口",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "v3-unsupported-vehicle-movement-002",
+    "category": "unsupported_vehicle_movement",
+    "user_input": "召唤车辆过来接我",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-vehicle-002",
+    "category": "unsupported_vehicle_action_or_telemetry",
+    "user_input": "检查一下我的车还剩多少油",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-vehicle-003",
+    "category": "unsupported_vehicle_action_or_telemetry",
+    "user_input": "帮我远程启动汽车",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-calendar-001",
+    "category": "calendar_write_unsupported",
+    "user_input": "把下周一下午三点的会议加到日历",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  }
+]

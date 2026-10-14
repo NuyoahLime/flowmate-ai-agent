@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pydantic
+pytest
+httpx2
+openai
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib

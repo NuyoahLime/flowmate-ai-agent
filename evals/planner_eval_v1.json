@@ -1,0 +1,248 @@
+[
+  {
+    "id": "commute-001",
+    "category": "morning_commute",
+    "user_input": "我明天早上八点半在公司开会，帮我安排好明早出门",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {"location": "current_city", "date": "tomorrow"},
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "commute-002",
+    "category": "morning_commute",
+    "user_input": "明早要去公司开会，帮我安排出门",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {"location": "current_city", "date": "tomorrow"},
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "commute-003",
+    "category": "morning_commute",
+    "user_input": "明天上班帮我安排一下通勤",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {"location": "current_city", "date": "tomorrow"},
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "commute-004",
+    "category": "morning_commute",
+    "user_input": "明早去公司开会，安排一下出门",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {"location": "current_city", "date": "tomorrow"},
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "commute-005",
+    "category": "morning_commute",
+    "user_input": "明天早上上班，帮我安排通勤",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {"location": "current_city", "date": "tomorrow"},
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "commute-006",
+    "category": "morning_commute",
+    "user_input": "明天公司开会前帮我安排出门",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {"location": "current_city", "date": "tomorrow"},
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "commute-007",
+    "category": "morning_commute",
+    "user_input": "明早上班的通勤帮我安排一下",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {"location": "current_city", "date": "tomorrow"},
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "commute-008",
+    "category": "morning_commute",
+    "user_input": "明天去公司开会，帮我安排一下明早出门",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {"location": "current_city", "date": "tomorrow"},
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "commute-009",
+    "category": "morning_commute",
+    "user_input": "帮我安排明天上班通勤",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {"location": "current_city", "date": "tomorrow"},
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "commute-010",
+    "category": "morning_commute",
+    "user_input": "明早出门去公司，帮我安排通勤",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {"location": "current_city", "date": "tomorrow"},
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "unsupported-smart-home-001",
+    "category": "unsupported_smart_home",
+    "user_input": "帮我把客厅灯关掉",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-smart-home-002",
+    "category": "unsupported_smart_home",
+    "user_input": "回家前打开卧室空调",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-smart-home-003",
+    "category": "unsupported_smart_home",
+    "user_input": "把家里的灯调成适合学习的亮度",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-smart-home-004",
+    "category": "unsupported_smart_home",
+    "user_input": "孩子回家后打开书房灯",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-vehicle-001",
+    "category": "unsupported_vehicle",
+    "user_input": "帮我把车开到公司门口",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-vehicle-002",
+    "category": "unsupported_vehicle",
+    "user_input": "检查一下我的车还剩多少油",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-vehicle-003",
+    "category": "unsupported_vehicle",
+    "user_input": "帮我远程启动汽车",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-calendar-001",
+    "category": "unsupported_calendar",
+    "user_input": "把下周一下午三点的会议加到日历",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-calendar-002",
+    "category": "unsupported_calendar",
+    "user_input": "查一下我下个月有哪些安排",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-calendar-003",
+    "category": "unsupported_calendar",
+    "user_input": "取消明天上午的日历会议",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-notification-001",
+    "category": "unsupported_notification",
+    "user_input": "晚上八点提醒我给妈妈打电话",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "unsupported-notification-002",
+    "category": "unsupported_notification",
+    "user_input": "明早七点发通知叫我起床",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  }
+]

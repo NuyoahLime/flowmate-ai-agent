@@ -1,0 +1,79 @@
+{
+  "id": "task-morning-commute-001",
+  "user_input": "明天早上八点半在公司开会，帮我安排好明早出门",
+  "goal": "安排明早出门，确保按时到达公司参加八点半会议",
+  "status": "PLANNED",
+  "risk_level": "MEDIUM",
+  "requires_confirmation": true,
+  "confirmation_status": "PENDING",
+  "steps": [
+    {
+      "id": "step-001",
+      "order": 1,
+      "description": "确认明早会议时间和地点",
+      "tool_name": "calendar_tool",
+      "tool_call": {
+        "tool_name": "calendar_tool",
+        "arguments": {
+          "date": "tomorrow",
+          "event_hint": "公司会议"
+        },
+        "status": "PENDING",
+        "result": null,
+        "error": null
+      },
+      "status": "PENDING"
+    },
+    {
+      "id": "step-002",
+      "order": 2,
+      "description": "检查明早天气",
+      "tool_name": "weather_tool",
+      "tool_call": {
+        "tool_name": "weather_tool",
+        "arguments": {
+          "date": "tomorrow_morning",
+          "location": "current_city"
+        },
+        "status": "PENDING",
+        "result": null,
+        "error": null
+      },
+      "status": "PENDING"
+    },
+    {
+      "id": "step-003",
+      "order": 3,
+      "description": "估算明早到公司的通勤路线和出发时间",
+      "tool_name": "navigation_tool",
+      "tool_call": {
+        "tool_name": "navigation_tool",
+        "arguments": {
+          "destination": "company",
+          "arrival_time": "08:30"
+        },
+        "status": "PENDING",
+        "result": null,
+        "error": null
+      },
+      "status": "PENDING"
+    },
+    {
+      "id": "step-004",
+      "order": 4,
+      "description": "提醒用户明早按计划出门",
+      "tool_name": "notification_tool",
+      "tool_call": {
+        "tool_name": "notification_tool",
+        "arguments": {
+          "message": "明早请按计划出门，确保八点半前到达公司。",
+          "time": "tomorrow_morning"
+        },
+        "status": "PENDING",
+        "result": null,
+        "error": null
+      },
+      "status": "PENDING"
+    }
+  ]
+}

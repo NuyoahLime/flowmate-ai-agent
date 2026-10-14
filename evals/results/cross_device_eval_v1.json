@@ -1,0 +1,114 @@
+{
+  "metrics": {
+    "cases": 16,
+    "device_registration_accuracy": 1.0,
+    "routing_accuracy": 1.0,
+    "capability_match_accuracy": 1.0,
+    "offline_device_rejection": 1.0,
+    "handoff_creation_accuracy": 1.0,
+    "duplicate_handoff_prevention": 1.0,
+    "handoff_acceptance_accuracy": 1.0,
+    "wrong_user_isolation": 1.0,
+    "restart_persistence": 1.0,
+    "confirmation_consistency": 1.0,
+    "state_sync_accuracy": 1.0
+  },
+  "results": [
+    {
+      "id": "cross-routing-001",
+      "scenario": "routing_success",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": "cross-routing-002",
+      "scenario": "routing_deterministic",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": "cross-routing-003",
+      "scenario": "routing_reason",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": "cross-offline-001",
+      "scenario": "offline_route",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": "cross-offline-002",
+      "scenario": "offline_handoff",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": "cross-capability-001",
+      "scenario": "missing_capability_route",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": "cross-capability-002",
+      "scenario": "missing_capability_handoff",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": "cross-duplicate-001",
+      "scenario": "duplicate_handoff",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": "cross-duplicate-002",
+      "scenario": "duplicate_after_restart",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": "cross-accept-001",
+      "scenario": "accept_idempotency",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": "cross-accept-002",
+      "scenario": "version_conflict",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": "cross-isolation-001",
+      "scenario": "wrong_user_handoff",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": "cross-isolation-002",
+      "scenario": "wrong_user_confirmation",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": "cross-reject-001",
+      "scenario": "reject",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": "cross-restart-001",
+      "scenario": "restart_persistence",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": "cross-confirmation-001",
+      "scenario": "confirmation_consistency",
+      "passed": true,
+      "error": null
+    }
+  ]
+}

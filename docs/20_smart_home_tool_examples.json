@@ -1,0 +1,37 @@
+{
+  "examples": [
+    {
+      "request": {
+        "device_id": "living-room-light",
+        "device_type": "light",
+        "action": "turn_off"
+      },
+      "result": {
+        "device_id": "living-room-light",
+        "device_type": "light",
+        "action": "turn_off",
+        "status": "mock_executed",
+        "state": {
+          "power": "off"
+        }
+      }
+    },
+    {
+      "request": {
+        "device_id": "bedroom-ac",
+        "device_type": "air_conditioner",
+        "action": "set_temperature",
+        "value": 24
+      },
+      "result": {
+        "device_id": "bedroom-ac",
+        "device_type": "air_conditioner",
+        "action": "set_temperature",
+        "status": "mock_executed",
+        "state": {
+          "temperature": 24
+        }
+      }
+    }
+  ]
+}

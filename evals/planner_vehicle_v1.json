@@ -1,0 +1,232 @@
+[
+  {
+    "id": "vehicle-status-001",
+    "category": "vehicle_status_supported",
+    "user_input": "看看我的车现在是什么状态",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "get_status"}},
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "vehicle-status-002",
+    "category": "vehicle_status_supported",
+    "user_input": "看看我的车是不是锁着",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "get_status"}},
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "vehicle-status-003",
+    "category": "vehicle_status_supported",
+    "user_input": "查看车辆当前状态",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "get_status"}},
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "vehicle-status-004",
+    "category": "vehicle_status_supported",
+    "user_input": "查询我的车当前锁定和空调状态",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "get_status"}},
+    "expected_risk_level": "LOW",
+    "expected_requires_confirmation": false
+  },
+  {
+    "id": "vehicle-climate-001",
+    "category": "vehicle_climate_supported",
+    "user_input": "打开我车里的空调",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "start_climate"}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "vehicle-climate-002",
+    "category": "vehicle_climate_supported",
+    "user_input": "把车里的空调关掉",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "stop_climate"}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "vehicle-climate-003",
+    "category": "vehicle_climate_supported",
+    "user_input": "把车内空调打开并设为24度",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "start_climate", "temperature": 24}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "vehicle-climate-004",
+    "category": "vehicle_climate_supported",
+    "user_input": "把车内空调打开到16度",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "start_climate", "temperature": 16}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "vehicle-climate-005",
+    "category": "vehicle_climate_supported",
+    "user_input": "把车内空调打开到30度",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "start_climate", "temperature": 30}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "vehicle-climate-006",
+    "category": "vehicle_climate_supported",
+    "user_input": "启动我的车内空调",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "start_climate"}},
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "vehicle-lock-001",
+    "category": "vehicle_lock_supported",
+    "user_input": "把我的车锁上",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "lock"}},
+    "expected_risk_level": "HIGH",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "vehicle-lock-002",
+    "category": "vehicle_lock_supported",
+    "user_input": "锁一下我的车",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "lock"}},
+    "expected_risk_level": "HIGH",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "vehicle-lock-003",
+    "category": "vehicle_lock_supported",
+    "user_input": "现在把车辆锁定",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "lock"}},
+    "expected_risk_level": "HIGH",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "vehicle-unlock-001",
+    "category": "vehicle_unlock_supported",
+    "user_input": "把我的车解锁",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "unlock"}},
+    "expected_risk_level": "HIGH",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "vehicle-unlock-002",
+    "category": "vehicle_unlock_supported",
+    "user_input": "解锁车辆",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "unlock"}},
+    "expected_risk_level": "HIGH",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "vehicle-unlock-003",
+    "category": "vehicle_unlock_supported",
+    "user_input": "现在打开我的车锁",
+    "supported": true,
+    "expected_tools": ["vehicle_tool"],
+    "expected_arguments": {"vehicle_tool": {"vehicle_id": "my-car", "action": "unlock"}},
+    "expected_risk_level": "HIGH",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "vehicle-movement-001",
+    "category": "vehicle_movement_unsupported",
+    "user_input": "把车开到公司门口",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "vehicle-movement-002",
+    "category": "vehicle_movement_unsupported",
+    "user_input": "让车自己过来接我",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "vehicle-movement-003",
+    "category": "vehicle_movement_unsupported",
+    "user_input": "把车挪到楼下",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "vehicle-action-001",
+    "category": "unsupported_vehicle_action",
+    "user_input": "打开车辆后备箱",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "vehicle-action-002",
+    "category": "unsupported_vehicle_action",
+    "user_input": "让我的车鸣笛两声",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "vehicle-automation-001",
+    "category": "scheduled_conditional_unsupported",
+    "user_input": "明早七点打开车内空调",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "vehicle-automation-002",
+    "category": "scheduled_conditional_unsupported",
+    "user_input": "如果外面低于5度就打开车内空调",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "vehicle-minimality-001",
+    "category": "non_vehicle_minimality",
+    "user_input": "我自己开车去公司，帮我规划路线",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  }
+]

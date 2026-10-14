@@ -1,0 +1,94 @@
+[
+  {
+    "id": "challenge-supported-001",
+    "category": "morning_commute_paraphrase",
+    "user_input": "明早八点半得准时到办公室，帮我看看出发前天气和路上需要多久。",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {"location": "current_city", "date": "tomorrow"},
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "challenge-supported-002",
+    "category": "morning_commute_paraphrase",
+    "user_input": "上午有个重要会议，我得提前到单位，帮我安排一下早上的行程。",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {"location": "current_city", "date": "tomorrow"},
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "challenge-supported-003",
+    "category": "morning_commute_paraphrase",
+    "user_input": "明早我要准时抵达办公地点，出发前看看天气和路程情况。",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {"location": "current_city", "date": "tomorrow"},
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "challenge-supported-004",
+    "category": "morning_commute_paraphrase",
+    "user_input": "明天上午需要去办公室参加会议，帮我规划一下早上的出行。",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {"location": "current_city", "date": "tomorrow"},
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "challenge-hard-negative-001",
+    "category": "unsupported_hard_negative",
+    "user_input": "公司通知明天不用上班。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "challenge-hard-negative-002",
+    "category": "unsupported_hard_negative",
+    "user_input": "我想了解“通勤”是什么意思。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "challenge-hard-negative-003",
+    "category": "unsupported_hard_negative",
+    "user_input": "我们开会讨论一下公司的通勤制度。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "challenge-hard-negative-004",
+    "category": "unsupported_hard_negative",
+    "user_input": "我已经到公司了，不需要安排出门。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  }
+]

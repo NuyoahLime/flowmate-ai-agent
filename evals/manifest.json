@@ -1,0 +1,75 @@
+{
+  "datasets": {
+    "cross_device_eval_v1.json": {
+      "dataset_version": "v1",
+      "capability_profile": [
+        "device_identity",
+        "device_routing",
+        "task_handoff",
+        "cross_client_state_sync",
+        "confirmation_consistency"
+      ],
+      "status": "current_cross_device_baseline"
+    },
+    "planner_eval_v1.json": {
+      "dataset_version": "v1",
+      "capability_profile": [
+        "weather_read",
+        "navigation_read"
+      ],
+      "status": "historical_baseline"
+    },
+    "planner_eval_v2.json": {
+      "dataset_version": "v2",
+      "capability_profile": [
+        "weather_read",
+        "navigation_read",
+        "calendar_read"
+      ],
+      "status": "historical_capability_baseline"
+    },
+    "planner_eval_v3.json": {
+      "dataset_version": "v3",
+      "capability_profile": [
+        "weather_read",
+        "navigation_read",
+        "calendar_read",
+        "notification_immediate",
+        "smart_home_immediate_mock_control",
+        "vehicle_status_read",
+        "vehicle_immediate_mock_control"
+      ],
+      "status": "current_capability_baseline"
+    },
+    "planner_calendar_temporal_v1.json": {
+      "dataset_version": "v1",
+      "capability_profile": [
+        "calendar_read"
+      ],
+      "status": "calendar_temporal_diagnostic"
+    },
+    "planner_smart_home_v1.json": {
+      "dataset_version": "v1",
+      "capability_profile": [
+        "weather_read",
+        "calendar_read",
+        "notification_immediate",
+        "smart_home_immediate_mock_control"
+      ],
+      "status": "smart_home_authorization_diagnostic"
+    },
+    "planner_vehicle_v1.json": {
+      "dataset_version": "v1",
+      "capability_profile": [
+        "navigation_read",
+        "vehicle_status_read",
+        "vehicle_immediate_mock_control"
+      ],
+      "status": "vehicle_authorization_high_risk_diagnostic"
+    }
+  },
+  "relabeling_policy": {
+    "model_driven_relabeling": "forbidden",
+    "capability_driven_relabeling": "allowed"
+  }
+}

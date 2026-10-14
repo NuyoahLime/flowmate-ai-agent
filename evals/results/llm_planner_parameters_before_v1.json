@@ -1,0 +1,472 @@
+{
+  "planner_name": "LLMPlanner",
+  "dataset": "evals\\planner_parameters_v1.json",
+  "metrics": {
+    "cases": 12,
+    "scenario_accuracy": 1.0,
+    "tool_selection_accuracy": 1.0,
+    "parameter_accuracy": 0.9555555555555556,
+    "parameter_completeness": 1.0,
+    "unsupported_accuracy": null,
+    "schema_valid_rate": 1.0,
+    "extra_tool_rate": 0.0
+  },
+  "results": [
+    {
+      "case_id": "parameters-navigation-001",
+      "category": "navigation_required_arguments",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明早从家去公司，帮我看看大概要多久。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    },
+    {
+      "case_id": "parameters-navigation-002",
+      "category": "navigation_required_arguments",
+      "failure_type": "parameter_error",
+      "planner_name": "LLMPlanner",
+      "user_input": "明天早上从家到办公室怎么走？",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 0.6666666666666666,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "office",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    },
+    {
+      "case_id": "parameters-navigation-003",
+      "category": "navigation_required_arguments",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明早我要从家出发去公司，帮我规划路线。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    },
+    {
+      "case_id": "parameters-navigation-004",
+      "category": "navigation_required_arguments",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明天早晨从家开车去单位大概要多久？",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    },
+    {
+      "case_id": "parameters-navigation-005",
+      "category": "navigation_required_arguments",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明早家里出发到公司，帮我估算通勤时间。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    },
+    {
+      "case_id": "parameters-navigation-006",
+      "category": "navigation_required_arguments",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明天上午从家去办公地点，帮我算一下路上时间。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    },
+    {
+      "case_id": "parameters-weather-001",
+      "category": "weather_required_arguments",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "查一下明天我所在城市的天气。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    },
+    {
+      "case_id": "parameters-weather-002",
+      "category": "weather_required_arguments",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "看看明天 current_city 会不会下雨。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    },
+    {
+      "case_id": "parameters-weather-003",
+      "category": "weather_required_arguments",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我看看明天这里天气怎么样。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    },
+    {
+      "case_id": "parameters-combined-001",
+      "category": "combined_required_arguments",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明早从家去公司前，帮我看天气并算一下路上多久。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    },
+    {
+      "case_id": "parameters-combined-002",
+      "category": "combined_required_arguments",
+      "failure_type": "parameter_error",
+      "planner_name": "LLMPlanner",
+      "user_input": "明天早上从家到办公室，帮我同时查天气和路线。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 0.8,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "office",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    },
+    {
+      "case_id": "parameters-combined-003",
+      "category": "combined_required_arguments",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明早我要从家出发去公司开会，帮我看天气和通勤时间。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    }
+  ]
+}

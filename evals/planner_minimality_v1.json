@@ -1,0 +1,182 @@
+[
+  {
+    "id": "minimality-navigation-001",
+    "category": "navigation_only",
+    "user_input": "帮我看看明早从家到公司大概要多久。",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "minimality-navigation-002",
+    "category": "navigation_only",
+    "user_input": "给我规划一下明早去办公室的路线。",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "minimality-navigation-003",
+    "category": "navigation_only",
+    "user_input": "从家开车到公司一般要多长时间？",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "minimality-navigation-004",
+    "category": "navigation_only",
+    "user_input": "帮我看看去单位怎么走比较合适。",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "minimality-weather-001",
+    "category": "weather_only",
+    "user_input": "帮我看看明早天气怎么样。",
+    "supported": true,
+    "expected_tools": ["weather_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "minimality-weather-002",
+    "category": "weather_only",
+    "user_input": "明天早上会下雨吗？",
+    "supported": true,
+    "expected_tools": ["weather_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "minimality-weather-003",
+    "category": "weather_only",
+    "user_input": "明早出门前温度大概多少？",
+    "supported": true,
+    "expected_tools": ["weather_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "minimality-weather-004",
+    "category": "weather_only",
+    "user_input": "查一下明天早上的天气。",
+    "supported": true,
+    "expected_tools": ["weather_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "minimality-both-001",
+    "category": "weather_and_navigation",
+    "user_input": "明早去公司前帮我看看天气和路上需要多久。",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      },
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "minimality-both-002",
+    "category": "weather_and_navigation",
+    "user_input": "我明天早上要去办公室，查一下天气和路线。",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      },
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "minimality-both-003",
+    "category": "weather_and_navigation",
+    "user_input": "帮我看看明早上班天气怎么样，再估一下通勤时间。",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      },
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "minimality-both-004",
+    "category": "weather_and_navigation",
+    "user_input": "明早去单位，帮我同时看看天气和怎么走。",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      },
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  }
+]

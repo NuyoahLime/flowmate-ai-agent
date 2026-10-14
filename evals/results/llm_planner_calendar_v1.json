@@ -1,0 +1,514 @@
+{
+  "planner_name": "LLMPlanner",
+  "dataset": "evals\\planner_calendar_v1.json",
+  "max_attempts_per_case": 2,
+  "metrics": {
+    "cases": 15,
+    "scenario_accuracy": 1.0,
+    "supported_recall": 1.0,
+    "unsupported_recall": 1.0,
+    "tool_selection_accuracy": 1.0,
+    "parameter_accuracy": 0.8571428571428571,
+    "parameter_completeness": 0.9047619047619048,
+    "unsupported_accuracy": 1.0,
+    "schema_valid_rate": 1.0,
+    "extra_tool_rate": 0.0,
+    "retry_cases": 2,
+    "retry_recovery_rate": 0.5,
+    "total_provider_attempts": 17,
+    "average_provider_attempts_per_case": 1.1333333333333333
+  },
+  "results": [
+    {
+      "case_id": "calendar-read-001",
+      "category": "calendar_read_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我看看明天有什么日程。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-read-002",
+      "category": "calendar_read_supported",
+      "failure_type": "parameter_completeness_error",
+      "planner_name": "LLMPlanner",
+      "user_input": "查一下明早有什么安排。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 0.3333333333333333,
+      "parameter_completeness": 0.3333333333333333,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "06:00",
+          "end_time": "12:00"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-read-003",
+      "category": "calendar_read_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "我明天下午有什么会议？",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "12:00",
+          "end_time": "18:00"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "12:00",
+          "end_time": "18:00"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-read-004",
+      "category": "calendar_read_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "看看明天全天的会议安排。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "00:00",
+          "end_time": "23:59"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-read-005",
+      "category": "calendar_read_supported",
+      "failure_type": "parameter_value_error",
+      "planner_name": "LLMPlanner",
+      "user_input": "明天上午我的日历里有什么？",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 0.6666666666666666,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "06:00",
+          "end_time": "12:00"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "09:00",
+          "end_time": "12:00"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 2,
+      "retry_performed": true,
+      "first_provider_error_type": "provider_invalid_json",
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-read-006",
+      "category": "calendar_read_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我查查明天下午的安排。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "12:00",
+          "end_time": "18:00"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "12:00",
+          "end_time": "18:00"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-read-007",
+      "category": "calendar_read_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明天有会议吗？帮我看一下。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-write-001",
+      "category": "calendar_write_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我新建明天下午三点的会议。",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "无法创建会议，当前仅支持查询日程，不支持新建、修改或删除日历事件。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-write-002",
+      "category": "calendar_write_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "删除我明天上午的周会。",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "删除日程属于日历写入操作，当前工具仅支持只读查询日历，无法删除或修改会议。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-write-003",
+      "category": "calendar_write_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把明天下午的会议改到四点。",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "日历写入操作不受支持，无法修改会议时间。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-write-004",
+      "category": "calendar_write_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我取消明天的会议。",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "取消会议属于日历修改操作，需要日历写入能力，而当前可用的工具仅支持日历查询，无法创建、取消或修改会议事件。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-dynamic-001",
+      "category": "dynamic_dependency_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "看看我明早第一场会议，然后帮我规划什么时候出门。",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "需要先查询明早的会议时间，再根据会议时间计算出门时间，但后续导航步骤的出发时间依赖于日历查询结果。此类依赖运行时结果的规划当前版本不支持，无法在不猜测会议时间的情况下安排出门时间。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 2,
+      "retry_performed": true,
+      "first_provider_error_type": "provider_empty_output",
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-dynamic-002",
+      "category": "dynamic_dependency_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "查一下我明天的会议地点，再规划怎么过去。",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "规划前往会议地点的路线需要先通过日历查询得知会议地点，而导航参数依赖于日历查询的运行结果，这种依赖后续工具运行结果的计划在当前版本中不受支持。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-dynamic-003",
+      "category": "dynamic_dependency_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "看看明早几点开会，然后估算我几点从家出发。",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "需要先查询明早会议时间，再根据会议时间推算出发时刻，后续导航参数依赖日历查询的运行时结果，当前版本不支持此类依赖链。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-dynamic-004",
+      "category": "dynamic_dependency_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "查一下明天第一场安排，再帮我看去那里的路线。",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "导航目的地位于日历查询的运行时结果中，无法预先确定，当前版本不支持此类依赖运行时结果的计划。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    }
+  ],
+  "note": "Planner-only eval with bounded provider retry. No Task or Tool execution."
+}

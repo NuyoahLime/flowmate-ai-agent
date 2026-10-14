@@ -1,0 +1,20 @@
+{
+  "name": "flowmate-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "2.3.4",
+    "@vue/compiler-sfc": "3.2.47",
+    "entities": "2.2.0",
+    "vite": "2.9.18",
+    "vue": "3.2.47",
+    "typescript": "4.9.5"
+  },
+  "devDependencies": {}
+}

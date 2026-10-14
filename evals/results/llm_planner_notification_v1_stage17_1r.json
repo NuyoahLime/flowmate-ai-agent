@@ -1,0 +1,599 @@
+{
+  "planner_name": "LLMPlanner",
+  "dataset": "evals\\planner_notification_v1.json",
+  "max_attempts_per_case": 2,
+  "metrics": {
+    "cases": 16,
+    "scenario_accuracy": 1.0,
+    "supported_recall": 1.0,
+    "unsupported_recall": 1.0,
+    "tool_selection_accuracy": 1.0,
+    "parameter_accuracy": 1.0,
+    "parameter_completeness": 1.0,
+    "temporal_constraint_preservation_rate": 1.0,
+    "unsupported_accuracy": 1.0,
+    "schema_valid_rate": 1.0,
+    "extra_tool_rate": 0.0,
+    "retry_cases": 0,
+    "retry_recovery_rate": null,
+    "total_provider_attempts": 16,
+    "average_provider_attempts_per_case": 1.0
+  },
+  "results": [
+    {
+      "case_id": "notification-immediate-001",
+      "category": "immediate_notification_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "现在给我发个通知，标题是 Morning commute，内容是 Your route is ready.",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "notification_tool"
+      ],
+      "expected_arguments": {
+        "notification_tool": {
+          "title": "Morning commute",
+          "message": "Your route is ready.",
+          "channel": "mobile"
+        }
+      },
+      "predicted_tools": [
+        "notification_tool"
+      ],
+      "predicted_arguments": {
+        "notification_tool": {
+          "title": "Morning commute",
+          "message": "Your route is ready.",
+          "channel": "mobile"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "notification-immediate-002",
+      "category": "immediate_notification_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "给我发个手机通知，标题是 Meeting materials，内容是 Materials are ready.",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "notification_tool"
+      ],
+      "expected_arguments": {
+        "notification_tool": {
+          "title": "Meeting materials",
+          "message": "Materials are ready.",
+          "channel": "mobile"
+        }
+      },
+      "predicted_tools": [
+        "notification_tool"
+      ],
+      "predicted_arguments": {
+        "notification_tool": {
+          "title": "Meeting materials",
+          "message": "Materials are ready.",
+          "channel": "mobile"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "notification-immediate-003",
+      "category": "immediate_notification_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "通知我：标题 Task update，内容 Today's tasks are complete.",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "notification_tool"
+      ],
+      "expected_arguments": {
+        "notification_tool": {
+          "title": "Task update",
+          "message": "Today's tasks are complete.",
+          "channel": "mobile"
+        }
+      },
+      "predicted_tools": [
+        "notification_tool"
+      ],
+      "predicted_arguments": {
+        "notification_tool": {
+          "title": "Task update",
+          "message": "Today's tasks are complete.",
+          "channel": "mobile"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "notification-immediate-004",
+      "category": "immediate_notification_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "马上发一条通知，标题 Route ready，内容 Your commute route is ready.",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "notification_tool"
+      ],
+      "expected_arguments": {
+        "notification_tool": {
+          "title": "Route ready",
+          "message": "Your commute route is ready.",
+          "channel": "mobile"
+        }
+      },
+      "predicted_tools": [
+        "notification_tool"
+      ],
+      "predicted_arguments": {
+        "notification_tool": {
+          "title": "Route ready",
+          "message": "Your commute route is ready.",
+          "channel": "mobile"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "notification-immediate-005",
+      "category": "immediate_notification_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "现在通知我，标题 Calendar checked，内容 Your calendar has been checked.",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "notification_tool"
+      ],
+      "expected_arguments": {
+        "notification_tool": {
+          "title": "Calendar checked",
+          "message": "Your calendar has been checked.",
+          "channel": "mobile"
+        }
+      },
+      "predicted_tools": [
+        "notification_tool"
+      ],
+      "predicted_arguments": {
+        "notification_tool": {
+          "title": "Calendar checked",
+          "message": "Your calendar has been checked.",
+          "channel": "mobile"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "notification-immediate-006",
+      "category": "immediate_notification_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "发个 mobile 通知给我，标题 Done，内容 FlowMate finished.",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "notification_tool"
+      ],
+      "expected_arguments": {
+        "notification_tool": {
+          "title": "Done",
+          "message": "FlowMate finished.",
+          "channel": "mobile"
+        }
+      },
+      "predicted_tools": [
+        "notification_tool"
+      ],
+      "predicted_arguments": {
+        "notification_tool": {
+          "title": "Done",
+          "message": "FlowMate finished.",
+          "channel": "mobile"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "notification-scheduled-001",
+      "category": "scheduled_notification_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明早八点提醒我开会",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "无法创建定时提醒；当前工具仅支持即时通知，不支持预定、延迟或条件提醒，且日历工具为只读，无法写入会议事件。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "notification-scheduled-002",
+      "category": "scheduled_notification_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "十分钟后提醒我喝水",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "十分钟后的定时提醒属于延迟提醒，超出可用工具能力范围：notification_tool 仅支持即时模拟通知，不支持定时或延迟发送；calendar_tool 为只读查询，无法创建提醒。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "notification-scheduled-003",
+      "category": "scheduled_notification_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "晚上六点通知我下班",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "定时提醒/通知功能暂不支持，仅支持立即发送的通知",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "notification-scheduled-004",
+      "category": "scheduled_notification_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "会议开始前十分钟提醒我",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "The requested outcome is a scheduled reminder before a future meeting, which requires delivering a notification at a future time. Available tools only support immediate mock notifications on explicit request, not scheduled or conditional alerts.",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "notification-conditional-001",
+      "category": "conditional_notification_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "如果明天下雨就提醒我带伞",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "此请求需要先查询明天天气，再根据是否下雨在将来触发提醒，属于条件性/定时通知。当前可用的 notification_tool 仅支持立即发送模拟通知，无法根据工具运行结果（如天气）进行条件判断或未来提醒，且依赖先后结果的计划不受支持。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "notification-conditional-002",
+      "category": "conditional_notification_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "如果路上堵车就通知我",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "Conditional traffic-based notifications are unsupported: the tools cannot monitor real-time traffic or trigger notifications based on conditions, and notification_tool only supports immediate explicit notifications.",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "notification-conditional-003",
+      "category": "conditional_notification_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "到公司以后提醒我打卡",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "该请求要求在到达公司后发送打卡提醒，这属于条件触发的未来提醒。当前工具无法检测您是否已到达公司，也不支持定时或条件触发的通知，仅支持立即发送模拟通知。因此无法满足该请求。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "notification-minimality-001",
+      "category": "non_notification_minimality",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明天会下雨吗？",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "notification-minimality-002",
+      "category": "non_notification_minimality",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我看看明天下午的日程",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": true,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "12:00",
+          "end_time": "18:00"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "12:00",
+          "end_time": "18:00"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "notification-minimality-003",
+      "category": "non_notification_minimality",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我规划去公司的路线",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    }
+  ],
+  "note": "Planner-only eval with bounded provider retry. No Task or Tool execution."
+}

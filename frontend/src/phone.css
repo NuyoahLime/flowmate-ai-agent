@@ -1,0 +1,422 @@
+.phone-shell {
+  min-height: 100vh;
+  padding: 24px 22px 48px;
+  color: #20242a;
+  background: #f4f5f6;
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  max-width: 960px;
+  margin: 0 auto 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #dfe3e8;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-end;
+}
+
+.brand-block small,
+.section-kicker {
+  color: #68717d;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+header h1 {
+  margin: 2px 0 3px;
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+header p {
+  margin: 0;
+  color: #68717d;
+}
+
+.device-pill {
+  min-width: 190px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1px 9px;
+  align-items: center;
+  color: #303741;
+}
+
+.presence-dot {
+  grid-row: span 2;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2f855a;
+}
+
+.device-pill div {
+  display: grid;
+}
+
+.device-pill small,
+.device-pill code {
+  color: #7d8590;
+  font-size: 12px;
+}
+
+.device-pill code {
+  grid-column: 2;
+}
+
+.journey-steps {
+  max-width: 960px;
+  margin: 0 auto 24px;
+  border-bottom: 1px solid #dfe3e8;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.journey-steps span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 0 11px;
+  color: #858d97;
+  font-size: 13px;
+}
+
+.journey-steps b {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #c9cfd6;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+}
+
+.journey-steps .active {
+  color: #2f5f8f;
+  font-weight: 650;
+}
+
+.journey-steps .active b {
+  border-color: #2f5f8f;
+  color: #fff;
+  background: #2f5f8f;
+}
+
+.phone-grid {
+  max-width: 960px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px 36px;
+  align-items: start;
+}
+
+.phone-card,
+.device-section,
+.phone-details {
+  min-width: 0;
+}
+
+.phone-card:not(.create-card),
+.device-section,
+.phone-details {
+  padding-top: 15px;
+  border-top: 1px solid #dfe3e8;
+}
+
+.create-card {
+  grid-column: 1 / -1;
+  padding: 22px;
+  border: 1px solid #d7dce2;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.phone-card h2,
+.device-section h2 {
+  margin: 2px 0 15px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.create-card label {
+  display: block;
+  margin-bottom: 6px;
+  color: #46505c;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 82px;
+  resize: vertical;
+  border: 1px solid #cbd2da;
+  border-radius: 6px;
+  padding: 12px 13px;
+  color: #20242a;
+  background: #fff;
+  font: inherit;
+  line-height: 1.65;
+}
+
+textarea::placeholder {
+  color: #9299a2;
+}
+
+textarea:focus {
+  border-color: #6687a8;
+  outline: 3px solid rgba(47, 95, 143, .2);
+  outline-offset: 1px;
+}
+
+.phone-primary {
+  min-height: 40px;
+  margin-top: 13px;
+  border: 1px solid #2f5f8f;
+  border-radius: 6px;
+  padding: 0 15px;
+  color: #fff;
+  background: #2f5f8f;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.phone-primary:not(:disabled):hover {
+  border-color: #244c74;
+  background: #244c74;
+}
+
+.phone-primary:disabled {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+.phone-primary:focus-visible,
+summary:focus-visible {
+  outline: 3px solid rgba(47, 95, 143, .24);
+  outline-offset: 2px;
+}
+
+.phone-info,
+.phone-error {
+  margin: 10px 0 0;
+  font-size: 13px;
+}
+
+.phone-info {
+  color: #256847;
+}
+
+.phone-error {
+  color: #a33832;
+}
+
+.card-heading,
+.device-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: center;
+}
+
+.card-heading h2 {
+  margin-bottom: 0;
+}
+
+.card-heading > span {
+  flex-shrink: 0;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 10px 14px;
+  margin: 16px 0 0;
+}
+
+dt {
+  color: #68717d;
+}
+
+dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.owner {
+  color: #2f5f8f;
+  font-weight: 650;
+}
+
+.status-chip {
+  display: inline-flex;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.status-chip.success {
+  color: #256847;
+  background: #eaf5ef;
+}
+
+.supporting-copy {
+  margin: 2px 0 0;
+  color: #68717d;
+}
+
+.ok {
+  color: #256847;
+}
+
+.muted {
+  color: #8e5d61;
+}
+
+.technical-details,
+.phone-details {
+  margin-top: 14px;
+  color: #68717d;
+  font-size: 12px;
+}
+
+.technical-details summary,
+.phone-details summary {
+  width: fit-content;
+  color: #596574;
+  cursor: pointer;
+}
+
+.technical-details p {
+  margin: 6px 0 0;
+}
+
+.technical-details code {
+  overflow-wrap: anywhere;
+}
+
+.trace-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.trace-list li {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  padding: 9px 0;
+  border-top: 1px solid #eceff2;
+}
+
+.trace-list li > span {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #cbd2da;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #4e5a67;
+  font-size: 12px;
+}
+
+.trace-list div {
+  display: grid;
+}
+
+.trace-list small {
+  color: #7a838e;
+}
+
+.timeline p {
+  margin: 0;
+  padding: 9px 0;
+  border-top: 1px solid #eceff2;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.timeline p b {
+  color: #68717d;
+  font-weight: 500;
+}
+
+.timeline p span,
+.device-row > b {
+  font-variant-numeric: tabular-nums;
+}
+
+.device-row {
+  padding: 10px 0;
+  border-top: 1px solid #eceff2;
+}
+
+.device-row span {
+  display: grid;
+  gap: 1px;
+}
+
+.device-row span small {
+  color: #858d97;
+  font: 12px ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+
+@media (max-width: 700px) {
+  .phone-shell {
+    padding: 18px 14px 36px;
+  }
+
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  .device-pill {
+    min-width: 0;
+  }
+
+  .journey-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .journey-steps span {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    padding-right: 6px;
+    line-height: 1.4;
+  }
+
+  .phone-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .create-card {
+    grid-column: auto;
+    padding: 18px 16px;
+  }
+
+  dl {
+    grid-template-columns: 78px minmax(0, 1fr);
+  }
+}
+

@@ -1,0 +1,164 @@
+[
+  {
+    "id": "calendar-temporal-whole-001",
+    "category": "whole_day",
+    "user_input": "帮我看看明天有什么安排。",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "calendar-temporal-whole-002",
+    "category": "whole_day",
+    "user_input": "查一下明天全天的日程。",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "calendar-temporal-whole-003",
+    "category": "whole_day",
+    "user_input": "明天我有哪些会议？",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "calendar-temporal-morning-001",
+    "category": "morning",
+    "user_input": "查一下明早有什么会议。",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow",
+        "start_time": "06:00",
+        "end_time": "12:00"
+      }
+    }
+  },
+  {
+    "id": "calendar-temporal-morning-002",
+    "category": "morning",
+    "user_input": "帮我看看明天上午的安排。",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow",
+        "start_time": "06:00",
+        "end_time": "12:00"
+      }
+    }
+  },
+  {
+    "id": "calendar-temporal-morning-003",
+    "category": "morning",
+    "user_input": "明天上午日历里有什么？",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow",
+        "start_time": "06:00",
+        "end_time": "12:00"
+      }
+    }
+  },
+  {
+    "id": "calendar-temporal-afternoon-001",
+    "category": "afternoon",
+    "user_input": "我明天下午有什么日程？",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow",
+        "start_time": "12:00",
+        "end_time": "18:00"
+      }
+    }
+  },
+  {
+    "id": "calendar-temporal-afternoon-002",
+    "category": "afternoon",
+    "user_input": "查一下明天下午有哪些会议。",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow",
+        "start_time": "12:00",
+        "end_time": "18:00"
+      }
+    }
+  },
+  {
+    "id": "calendar-temporal-afternoon-003",
+    "category": "afternoon",
+    "user_input": "帮我看明天下午的安排。",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow",
+        "start_time": "12:00",
+        "end_time": "18:00"
+      }
+    }
+  },
+  {
+    "id": "calendar-temporal-evening-001",
+    "category": "evening",
+    "user_input": "帮我看看明晚有什么安排。",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow",
+        "start_time": "18:00",
+        "end_time": "23:59"
+      }
+    }
+  },
+  {
+    "id": "calendar-temporal-evening-002",
+    "category": "evening",
+    "user_input": "查一下明天晚上有没有会议。",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow",
+        "start_time": "18:00",
+        "end_time": "23:59"
+      }
+    }
+  },
+  {
+    "id": "calendar-temporal-evening-003",
+    "category": "evening",
+    "user_input": "明天晚上我的日程是什么？",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow",
+        "start_time": "18:00",
+        "end_time": "23:59"
+      }
+    }
+  }
+]

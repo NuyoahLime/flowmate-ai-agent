@@ -1,0 +1,138 @@
+[
+  {
+    "id": "capability-supported-001",
+    "category": "supported_information_planning",
+    "user_input": "我自己开车去公司，帮我规划一下路线。",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "capability-supported-002",
+    "category": "supported_information_planning",
+    "user_input": "明早我开车去单位，大概需要多长时间？",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "capability-supported-003",
+    "category": "supported_information_planning",
+    "user_input": "我要自己驾驶去办公室，帮我看看怎么走。",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "capability-supported-004",
+    "category": "supported_information_planning",
+    "user_input": "我开车去公司，帮我估算一下路上时间。",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "capability-supported-005",
+    "category": "supported_information_planning",
+    "user_input": "明早自己开车出门，帮我查一下从家到公司的路线。",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "capability-supported-006",
+    "category": "supported_information_planning",
+    "user_input": "我要开车去办公地点，出发前帮我看看路线和天气。",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      },
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "capability-unsupported-001",
+    "category": "unsupported_physical_control",
+    "user_input": "帮我把车开到公司。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "capability-unsupported-002",
+    "category": "unsupported_physical_control",
+    "user_input": "帮我把车开到单位门口。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "capability-unsupported-003",
+    "category": "unsupported_physical_control",
+    "user_input": "把我的汽车从停车位开出来。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "capability-unsupported-004",
+    "category": "unsupported_physical_control",
+    "user_input": "帮我启动汽车并开去办公室。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "capability-unsupported-005",
+    "category": "unsupported_physical_control",
+    "user_input": "把车开回家。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "capability-unsupported-006",
+    "category": "unsupported_physical_control",
+    "user_input": "帮我把车移动到公司楼下。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  }
+]

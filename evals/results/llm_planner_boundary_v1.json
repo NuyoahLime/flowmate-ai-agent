@@ -1,0 +1,294 @@
+{
+  "planner_name": "LLMPlanner",
+  "dataset": "evals\\planner_boundary_v1.json",
+  "metrics": {
+    "cases": 10,
+    "scenario_accuracy": 1.0,
+    "tool_selection_accuracy": 0.6,
+    "parameter_accuracy": 1.0,
+    "unsupported_accuracy": 1.0,
+    "schema_valid_rate": 1.0
+  },
+  "results": [
+    {
+      "case_id": "boundary-supported-001",
+      "category": "vehicle_information",
+      "failure_type": "tool_selection_error",
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我规划一下明早开车去公司的路线",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": false,
+      "parameter_accuracy": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "error": null
+    },
+    {
+      "case_id": "boundary-supported-002",
+      "category": "vehicle_information",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "我自己开车去公司，看看大概需要多久",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "error": null
+    },
+    {
+      "case_id": "boundary-supported-003",
+      "category": "vehicle_information",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明早开车上班前帮我查一下天气和路况",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "error": null
+    },
+    {
+      "case_id": "boundary-supported-004",
+      "category": "vehicle_information",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我看看从家到公司的驾车路线",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "error": null
+    },
+    {
+      "case_id": "boundary-supported-005",
+      "category": "vehicle_information",
+      "failure_type": "tool_selection_error",
+      "planner_name": "LLMPlanner",
+      "user_input": "我要自己开车去单位，帮我估一下通勤时间",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": false,
+      "parameter_accuracy": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "error": null
+    },
+    {
+      "case_id": "boundary-unsupported-001",
+      "category": "vehicle_control",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我把车开到公司楼下",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "error": "请求是将车辆开到公司楼下，这需要实际驾驶或移动车辆，而可用工具（weather_tool 和 navigation_tool）只能提供天气信息和路线规划，无法执行任何物理操作。"
+    },
+    {
+      "case_id": "boundary-unsupported-002",
+      "category": "vehicle_control",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把我的车从停车场开出来",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "error": "无法使用可用工具控制或驾驶车辆。导航工具只能计算路线，不能实际移动车辆。"
+    },
+    {
+      "case_id": "boundary-unsupported-003",
+      "category": "vehicle_control",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "提前启动汽车空调",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "error": "无法通过可用工具启动汽车空调。导航工具只能规划路线，天气工具只能查询天气，均无法控制车辆或执行实际操作。"
+    },
+    {
+      "case_id": "boundary-unsupported-004",
+      "category": "vehicle_control",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我锁一下车",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "error": "锁车属于车辆控制操作，当前可用的天气查询和导航规划工具无法执行实际车辆控制，因此无法支持该请求。"
+    },
+    {
+      "case_id": "boundary-unsupported-005",
+      "category": "vehicle_control",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把车窗关上",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "error": "当前工具无法控制车窗，无法执行关窗操作。"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+.env
+.env.*
+!.env.example
+.secrets/
+*.secrets
+flowmate/agent/.secrets
+/credentials.json
+/token.json
+client_secret*.json
+
+# Python caches and local tooling state
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest-stage*/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.claude/
+.npm-cache-stage*/
+
+# Local runtime data and logs
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+data/*.log
+data/*.err.log
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Frontend dependencies, builds and local screenshots
+frontend/node_modules/
+frontend/dist/
+frontend/*.png
+frontend/*.jpg
+frontend/*.jpeg
+frontend/*.log
+frontend/*.timestamp-*.js

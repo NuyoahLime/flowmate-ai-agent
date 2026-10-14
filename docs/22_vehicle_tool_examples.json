@@ -1,0 +1,52 @@
+{
+  "examples": [
+    {
+      "name": "status",
+      "request": {
+        "vehicle_id": "my-car",
+        "action": "get_status"
+      },
+      "result": {
+        "vehicle_id": "my-car",
+        "action": "get_status",
+        "status": "mock_executed",
+        "state": {
+          "locked": true,
+          "climate": "off"
+        }
+      }
+    },
+    {
+      "name": "unlock",
+      "request": {
+        "vehicle_id": "my-car",
+        "action": "unlock"
+      },
+      "result": {
+        "vehicle_id": "my-car",
+        "action": "unlock",
+        "status": "mock_executed",
+        "state": {
+          "locked": false
+        }
+      }
+    },
+    {
+      "name": "start_climate",
+      "request": {
+        "vehicle_id": "my-car",
+        "action": "start_climate",
+        "temperature": 24
+      },
+      "result": {
+        "vehicle_id": "my-car",
+        "action": "start_climate",
+        "status": "mock_executed",
+        "state": {
+          "climate": "on",
+          "temperature": 24
+        }
+      }
+    }
+  ]
+}

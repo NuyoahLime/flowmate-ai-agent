@@ -1,0 +1,183 @@
+[
+  {
+    "id": "notification-immediate-001",
+    "category": "immediate_notification_supported",
+    "user_input": "现在给我发个通知，标题是 Morning commute，内容是 Your route is ready.",
+    "supported": true,
+    "expected_tools": ["notification_tool"],
+    "expected_arguments": {
+      "notification_tool": {
+        "title": "Morning commute",
+        "message": "Your route is ready.",
+        "channel": "mobile"
+      }
+    }
+  },
+  {
+    "id": "notification-immediate-002",
+    "category": "immediate_notification_supported",
+    "user_input": "给我发个手机通知，标题是 Meeting materials，内容是 Materials are ready.",
+    "supported": true,
+    "expected_tools": ["notification_tool"],
+    "expected_arguments": {
+      "notification_tool": {
+        "title": "Meeting materials",
+        "message": "Materials are ready.",
+        "channel": "mobile"
+      }
+    }
+  },
+  {
+    "id": "notification-immediate-003",
+    "category": "immediate_notification_supported",
+    "user_input": "通知我：标题 Task update，内容 Today's tasks are complete.",
+    "supported": true,
+    "expected_tools": ["notification_tool"],
+    "expected_arguments": {
+      "notification_tool": {
+        "title": "Task update",
+        "message": "Today's tasks are complete.",
+        "channel": "mobile"
+      }
+    }
+  },
+  {
+    "id": "notification-immediate-004",
+    "category": "immediate_notification_supported",
+    "user_input": "马上发一条通知，标题 Route ready，内容 Your commute route is ready.",
+    "supported": true,
+    "expected_tools": ["notification_tool"],
+    "expected_arguments": {
+      "notification_tool": {
+        "title": "Route ready",
+        "message": "Your commute route is ready.",
+        "channel": "mobile"
+      }
+    }
+  },
+  {
+    "id": "notification-immediate-005",
+    "category": "immediate_notification_supported",
+    "user_input": "现在通知我，标题 Calendar checked，内容 Your calendar has been checked.",
+    "supported": true,
+    "expected_tools": ["notification_tool"],
+    "expected_arguments": {
+      "notification_tool": {
+        "title": "Calendar checked",
+        "message": "Your calendar has been checked.",
+        "channel": "mobile"
+      }
+    }
+  },
+  {
+    "id": "notification-immediate-006",
+    "category": "immediate_notification_supported",
+    "user_input": "发个 mobile 通知给我，标题 Done，内容 FlowMate finished.",
+    "supported": true,
+    "expected_tools": ["notification_tool"],
+    "expected_arguments": {
+      "notification_tool": {
+        "title": "Done",
+        "message": "FlowMate finished.",
+        "channel": "mobile"
+      }
+    }
+  },
+  {
+    "id": "notification-scheduled-001",
+    "category": "scheduled_notification_unsupported",
+    "user_input": "明早八点提醒我开会",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "notification-scheduled-002",
+    "category": "scheduled_notification_unsupported",
+    "user_input": "十分钟后提醒我喝水",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "notification-scheduled-003",
+    "category": "scheduled_notification_unsupported",
+    "user_input": "晚上六点通知我下班",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "notification-scheduled-004",
+    "category": "scheduled_notification_unsupported",
+    "user_input": "会议开始前十分钟提醒我",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "notification-conditional-001",
+    "category": "conditional_notification_unsupported",
+    "user_input": "如果明天下雨就提醒我带伞",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "notification-conditional-002",
+    "category": "conditional_notification_unsupported",
+    "user_input": "如果路上堵车就通知我",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "notification-conditional-003",
+    "category": "conditional_notification_unsupported",
+    "user_input": "到公司以后提醒我打卡",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "notification-minimality-001",
+    "category": "non_notification_minimality",
+    "user_input": "明天会下雨吗？",
+    "supported": true,
+    "expected_tools": ["weather_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "notification-minimality-002",
+    "category": "non_notification_minimality",
+    "user_input": "帮我看看明天下午的日程",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow",
+        "start_time": "12:00",
+        "end_time": "18:00"
+      }
+    }
+  },
+  {
+    "id": "notification-minimality-003",
+    "category": "non_notification_minimality",
+    "user_input": "帮我规划去公司的路线",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  }
+]

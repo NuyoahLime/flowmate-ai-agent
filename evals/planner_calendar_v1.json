@@ -1,0 +1,158 @@
+[
+  {
+    "id": "calendar-read-001",
+    "category": "calendar_read_supported",
+    "user_input": "帮我看看明天有什么日程。",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "calendar-read-002",
+    "category": "calendar_read_supported",
+    "user_input": "查一下明早有什么安排。",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow",
+        "start_time": "06:00",
+        "end_time": "12:00"
+      }
+    }
+  },
+  {
+    "id": "calendar-read-003",
+    "category": "calendar_read_supported",
+    "user_input": "我明天下午有什么会议？",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow",
+        "start_time": "12:00",
+        "end_time": "18:00"
+      }
+    }
+  },
+  {
+    "id": "calendar-read-004",
+    "category": "calendar_read_supported",
+    "user_input": "看看明天全天的会议安排。",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "calendar-read-005",
+    "category": "calendar_read_supported",
+    "user_input": "明天上午我的日历里有什么？",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow",
+        "start_time": "06:00",
+        "end_time": "12:00"
+      }
+    }
+  },
+  {
+    "id": "calendar-read-006",
+    "category": "calendar_read_supported",
+    "user_input": "帮我查查明天下午的安排。",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow",
+        "start_time": "12:00",
+        "end_time": "18:00"
+      }
+    }
+  },
+  {
+    "id": "calendar-read-007",
+    "category": "calendar_read_supported",
+    "user_input": "明天有会议吗？帮我看一下。",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "calendar-write-001",
+    "category": "calendar_write_unsupported",
+    "user_input": "帮我新建明天下午三点的会议。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "calendar-write-002",
+    "category": "calendar_write_unsupported",
+    "user_input": "删除我明天上午的周会。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "calendar-write-003",
+    "category": "calendar_write_unsupported",
+    "user_input": "把明天下午的会议改到四点。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "calendar-write-004",
+    "category": "calendar_write_unsupported",
+    "user_input": "帮我取消明天的会议。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "calendar-dynamic-001",
+    "category": "dynamic_dependency_unsupported",
+    "user_input": "看看我明早第一场会议，然后帮我规划什么时候出门。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "calendar-dynamic-002",
+    "category": "dynamic_dependency_unsupported",
+    "user_input": "查一下我明天的会议地点，再规划怎么过去。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "calendar-dynamic-003",
+    "category": "dynamic_dependency_unsupported",
+    "user_input": "看看明早几点开会，然后估算我几点从家出发。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "calendar-dynamic-004",
+    "category": "dynamic_dependency_unsupported",
+    "user_input": "查一下明天第一场安排，再帮我看去那里的路线。",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  }
+]

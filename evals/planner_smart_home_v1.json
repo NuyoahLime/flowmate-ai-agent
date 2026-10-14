@@ -1,0 +1,261 @@
+[
+  {
+    "id": "smart-home-light-001",
+    "category": "light_control_supported",
+    "user_input": "把客厅灯打开",
+    "supported": true,
+    "expected_tools": ["smart_home_tool"],
+    "expected_arguments": {
+      "smart_home_tool": {
+        "device_id": "living-room-light",
+        "device_type": "light",
+        "action": "turn_on"
+      }
+    },
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "smart-home-light-002",
+    "category": "light_control_supported",
+    "user_input": "把客厅灯关掉",
+    "supported": true,
+    "expected_tools": ["smart_home_tool"],
+    "expected_arguments": {
+      "smart_home_tool": {
+        "device_id": "living-room-light",
+        "device_type": "light",
+        "action": "turn_off"
+      }
+    },
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "smart-home-light-003",
+    "category": "light_control_supported",
+    "user_input": "打开卧室灯",
+    "supported": true,
+    "expected_tools": ["smart_home_tool"],
+    "expected_arguments": {
+      "smart_home_tool": {
+        "device_id": "bedroom-light",
+        "device_type": "light",
+        "action": "turn_on"
+      }
+    },
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "smart-home-light-004",
+    "category": "light_control_supported",
+    "user_input": "关闭书房灯",
+    "supported": true,
+    "expected_tools": ["smart_home_tool"],
+    "expected_arguments": {
+      "smart_home_tool": {
+        "device_id": "study-room-light",
+        "device_type": "light",
+        "action": "turn_off"
+      }
+    },
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "smart-home-ac-001",
+    "category": "air_conditioner_control_supported",
+    "user_input": "打开卧室空调",
+    "supported": true,
+    "expected_tools": ["smart_home_tool"],
+    "expected_arguments": {
+      "smart_home_tool": {
+        "device_id": "bedroom-ac",
+        "device_type": "air_conditioner",
+        "action": "turn_on"
+      }
+    },
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "smart-home-ac-002",
+    "category": "air_conditioner_control_supported",
+    "user_input": "关闭卧室空调",
+    "supported": true,
+    "expected_tools": ["smart_home_tool"],
+    "expected_arguments": {
+      "smart_home_tool": {
+        "device_id": "bedroom-ac",
+        "device_type": "air_conditioner",
+        "action": "turn_off"
+      }
+    },
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "smart-home-ac-003",
+    "category": "air_conditioner_control_supported",
+    "user_input": "把卧室空调调到24度",
+    "supported": true,
+    "expected_tools": ["smart_home_tool"],
+    "expected_arguments": {
+      "smart_home_tool": {
+        "device_id": "bedroom-ac",
+        "device_type": "air_conditioner",
+        "action": "set_temperature",
+        "value": 24
+      }
+    },
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "smart-home-ac-004",
+    "category": "air_conditioner_control_supported",
+    "user_input": "把客厅空调调到26度",
+    "supported": true,
+    "expected_tools": ["smart_home_tool"],
+    "expected_arguments": {
+      "smart_home_tool": {
+        "device_id": "living-room-ac",
+        "device_type": "air_conditioner",
+        "action": "set_temperature",
+        "value": 26
+      }
+    },
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "smart-home-ac-005",
+    "category": "air_conditioner_control_supported",
+    "user_input": "把卧室空调设置为16度",
+    "supported": true,
+    "expected_tools": ["smart_home_tool"],
+    "expected_arguments": {
+      "smart_home_tool": {
+        "device_id": "bedroom-ac",
+        "device_type": "air_conditioner",
+        "action": "set_temperature",
+        "value": 16
+      }
+    },
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "smart-home-ac-006",
+    "category": "air_conditioner_control_supported",
+    "user_input": "把客厅空调设置为30度",
+    "supported": true,
+    "expected_tools": ["smart_home_tool"],
+    "expected_arguments": {
+      "smart_home_tool": {
+        "device_id": "living-room-ac",
+        "device_type": "air_conditioner",
+        "action": "set_temperature",
+        "value": 30
+      }
+    },
+    "expected_risk_level": "MEDIUM",
+    "expected_requires_confirmation": true
+  },
+  {
+    "id": "smart-home-device-001",
+    "category": "unsupported_device",
+    "user_input": "把窗帘关上",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "smart-home-device-002",
+    "category": "unsupported_device",
+    "user_input": "打开电视",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "smart-home-device-003",
+    "category": "unsupported_device",
+    "user_input": "把门锁上",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "smart-home-scheduled-001",
+    "category": "scheduled_automation_unsupported",
+    "user_input": "晚上十点把客厅灯关掉",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "smart-home-scheduled-002",
+    "category": "scheduled_automation_unsupported",
+    "user_input": "半小时后打开卧室空调",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "smart-home-conditional-001",
+    "category": "conditional_automation_unsupported",
+    "user_input": "如果房间超过30度就开卧室空调",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "smart-home-conditional-002",
+    "category": "conditional_automation_unsupported",
+    "user_input": "如果我到家就开客厅灯",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "smart-home-minimality-001",
+    "category": "non_smart_home_minimality",
+    "user_input": "明天会下雨吗？",
+    "supported": true,
+    "expected_tools": ["weather_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "smart-home-minimality-002",
+    "category": "non_smart_home_minimality",
+    "user_input": "帮我看看明天的会议安排",
+    "supported": true,
+    "expected_tools": ["calendar_tool"],
+    "expected_arguments": {
+      "calendar_tool": {
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "smart-home-minimality-003",
+    "category": "non_smart_home_minimality",
+    "user_input": "现在给我发通知，标题是 Task done，内容是任务已完成。",
+    "supported": true,
+    "expected_tools": ["notification_tool"],
+    "expected_arguments": {
+      "notification_tool": {
+        "title": "Task done",
+        "message": "任务已完成。",
+        "channel": "mobile"
+      }
+    }
+  }
+]

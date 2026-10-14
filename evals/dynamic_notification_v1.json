@@ -1,0 +1,90 @@
+[
+  {
+    "id": "dynamic-notification-confirm-001",
+    "category": "dynamic_notification_confirm_success",
+    "user_input": "help me plan tomorrow morning departure and notify me when ready",
+    "expected_notification": true,
+    "action": "confirm"
+  },
+  {
+    "id": "dynamic-notification-confirm-002",
+    "category": "dynamic_notification_confirm_success",
+    "user_input": "help me plan tomorrow morning departure, check weather, and notify me when ready",
+    "expected_notification": true,
+    "action": "confirm"
+  },
+  {
+    "id": "dynamic-notification-confirm-003",
+    "category": "dynamic_notification_confirm_success",
+    "user_input": "check my tomorrow morning meeting route and tell me when ready",
+    "expected_notification": true,
+    "action": "confirm"
+  },
+  {
+    "id": "dynamic-notification-confirm-004",
+    "category": "dynamic_notification_confirm_success",
+    "user_input": "plan tomorrow morning commute route and send a notification when ready",
+    "expected_notification": true,
+    "action": "confirm"
+  },
+  {
+    "id": "dynamic-notification-reject-001",
+    "category": "dynamic_notification_reject",
+    "user_input": "help me plan tomorrow morning departure and notify me when ready",
+    "expected_notification": true,
+    "action": "reject"
+  },
+  {
+    "id": "dynamic-notification-reject-002",
+    "category": "dynamic_notification_reject",
+    "user_input": "help me plan tomorrow morning departure, check weather, and notify me when ready",
+    "expected_notification": true,
+    "action": "reject"
+  },
+  {
+    "id": "dynamic-without-notification-001",
+    "category": "dynamic_without_notification",
+    "user_input": "help me plan tomorrow morning departure",
+    "expected_notification": false,
+    "action": "none"
+  },
+  {
+    "id": "dynamic-without-notification-002",
+    "category": "dynamic_without_notification",
+    "user_input": "help me plan tomorrow morning departure and check weather",
+    "expected_notification": false,
+    "action": "none"
+  },
+  {
+    "id": "dynamic-scheduled-notification-001",
+    "category": "scheduled_notification_unsupported",
+    "user_input": "help me plan tomorrow morning route and notify me at 7 tomorrow",
+    "expected_notification": false,
+    "action": "none",
+    "expected_failure_type": "unsupported_scheduled_notification"
+  },
+  {
+    "id": "dynamic-scheduled-notification-002",
+    "category": "scheduled_notification_unsupported",
+    "user_input": "help me plan tomorrow morning route and notify me after 10 minutes",
+    "expected_notification": false,
+    "action": "none",
+    "expected_failure_type": "unsupported_scheduled_notification"
+  },
+  {
+    "id": "dynamic-conditional-notification-001",
+    "category": "conditional_notification_unsupported",
+    "user_input": "help me plan tomorrow morning departure and if it rains notify me",
+    "expected_notification": false,
+    "action": "none",
+    "expected_failure_type": "unsupported_conditional_notification"
+  },
+  {
+    "id": "dynamic-conditional-notification-002",
+    "category": "conditional_notification_unsupported",
+    "user_input": "help me plan tomorrow morning route and if traffic is heavy notify me",
+    "expected_notification": false,
+    "action": "none",
+    "expected_failure_type": "unsupported_conditional_notification"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "request": {
+    "date": "tomorrow",
+    "start_time": "06:00",
+    "end_time": "12:00"
+  },
+  "result": {
+    "date": "tomorrow",
+    "event_count": 1,
+    "events": [
+      {
+        "id": "event-001",
+        "title": "Product Weekly Meeting",
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "location": "company",
+        "description": null
+      }
+    ]
+  }
+}

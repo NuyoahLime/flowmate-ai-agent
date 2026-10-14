@@ -1,0 +1,529 @@
+{
+  "planner_name": "LLMPlanner",
+  "dataset": "evals\\planner_calendar_temporal_v1.json",
+  "max_attempts_per_case": 2,
+  "metrics": {
+    "cases": 12,
+    "scenario_accuracy": 1.0,
+    "supported_recall": 1.0,
+    "unsupported_recall": null,
+    "tool_selection_accuracy": 1.0,
+    "parameter_accuracy": 1.0,
+    "parameter_completeness": 1.0,
+    "temporal_constraint_preservation_rate": 1.0,
+    "unsupported_accuracy": null,
+    "schema_valid_rate": 1.0,
+    "extra_tool_rate": 0.0,
+    "retry_cases": 0,
+    "retry_recovery_rate": null,
+    "total_provider_attempts": 12,
+    "average_provider_attempts_per_case": 1.0
+  },
+  "results": [
+    {
+      "case_id": "calendar-temporal-whole-001",
+      "category": "whole_day",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我看看明天有什么安排。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-temporal-whole-002",
+      "category": "whole_day",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "查一下明天全天的日程。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-temporal-whole-003",
+      "category": "whole_day",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明天我有哪些会议？",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-temporal-morning-001",
+      "category": "morning",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "查一下明早有什么会议。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": true,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "06:00",
+          "end_time": "12:00"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "06:00",
+          "end_time": "12:00"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-temporal-morning-002",
+      "category": "morning",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我看看明天上午的安排。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": true,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "06:00",
+          "end_time": "12:00"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "06:00",
+          "end_time": "12:00"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-temporal-morning-003",
+      "category": "morning",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明天上午日历里有什么？",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": true,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "06:00",
+          "end_time": "12:00"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "06:00",
+          "end_time": "12:00"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-temporal-afternoon-001",
+      "category": "afternoon",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "我明天下午有什么日程？",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": true,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "12:00",
+          "end_time": "18:00"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "12:00",
+          "end_time": "18:00"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-temporal-afternoon-002",
+      "category": "afternoon",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "查一下明天下午有哪些会议。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": true,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "12:00",
+          "end_time": "18:00"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "12:00",
+          "end_time": "18:00"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-temporal-afternoon-003",
+      "category": "afternoon",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我看明天下午的安排。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": true,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "12:00",
+          "end_time": "18:00"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "12:00",
+          "end_time": "18:00"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-temporal-evening-001",
+      "category": "evening",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我看看明晚有什么安排。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": true,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "18:00",
+          "end_time": "23:59"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "18:00",
+          "end_time": "23:59"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-temporal-evening-002",
+      "category": "evening",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "查一下明天晚上有没有会议。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": true,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "18:00",
+          "end_time": "23:59"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "18:00",
+          "end_time": "23:59"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "calendar-temporal-evening-003",
+      "category": "evening",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明天晚上我的日程是什么？",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": true,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "18:00",
+          "end_time": "23:59"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow",
+          "start_time": "18:00",
+          "end_time": "23:59"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    }
+  ],
+  "note": "Planner-only eval with bounded provider retry. No Task or Tool execution."
+}

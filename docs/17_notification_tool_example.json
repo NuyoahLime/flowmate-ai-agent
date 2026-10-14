@@ -1,0 +1,14 @@
+{
+  "request": {
+    "title": "Morning commute",
+    "message": "Your route is ready.",
+    "channel": "mobile"
+  },
+  "result": {
+    "notification_id": "mock-notification-f29decba8482",
+    "channel": "mobile",
+    "status": "mock_delivered",
+    "title": "Morning commute",
+    "message": "Your route is ready."
+  }
+}

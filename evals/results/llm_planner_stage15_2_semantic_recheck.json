@@ -1,0 +1,104 @@
+{
+  "planner_name": "LLMPlanner",
+  "case_count": 3,
+  "provider_call_count": 3,
+  "records": [
+    {
+      "case_id": "boundary-supported-002",
+      "dataset": "evals\\planner_boundary_v1.json",
+      "status": "previously_failed_now_passed",
+      "success": true,
+      "failure_stage": null,
+      "failure_type": null,
+      "expected_supported": true,
+      "predicted_supported": true,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "predicted_tools": [
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "schema_valid": true,
+      "error": null
+    },
+    {
+      "case_id": "boundary-supported-004",
+      "dataset": "evals\\planner_boundary_v1.json",
+      "status": "previously_failed_now_passed",
+      "success": true,
+      "failure_stage": null,
+      "failure_type": null,
+      "expected_supported": true,
+      "predicted_supported": true,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "predicted_tools": [
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "schema_valid": true,
+      "error": null
+    },
+    {
+      "case_id": "boundary-supported-005",
+      "dataset": "evals\\planner_boundary_v1.json",
+      "status": "previously_failed_now_passed",
+      "success": true,
+      "failure_stage": null,
+      "failure_type": null,
+      "expected_supported": true,
+      "predicted_supported": true,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "predicted_tools": [
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "schema_valid": true,
+      "error": null
+    }
+  ],
+  "note": "Planner-only semantic recheck. No Task or Tool execution."
+}

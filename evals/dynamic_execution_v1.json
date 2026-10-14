@@ -1,0 +1,96 @@
+[
+  {
+    "id": "execution-nav-001",
+    "category": "calendar_navigation_success",
+    "user_input": "帮我安排明早出门",
+    "supported": true,
+    "expected_continuation_tools": ["navigation_tool"],
+    "expected_executed_continuation_tools": ["navigation_tool"],
+    "expected_destination": "company"
+  },
+  {
+    "id": "execution-nav-002",
+    "category": "calendar_navigation_success",
+    "user_input": "看一下明早第一场会议，然后帮我规划怎么过去",
+    "supported": true,
+    "expected_continuation_tools": ["navigation_tool"],
+    "expected_executed_continuation_tools": ["navigation_tool"],
+    "expected_destination": "company"
+  },
+  {
+    "id": "execution-nav-003",
+    "category": "calendar_navigation_success",
+    "user_input": "根据明早日程帮我安排通勤路线",
+    "supported": true,
+    "expected_continuation_tools": ["navigation_tool"],
+    "expected_executed_continuation_tools": ["navigation_tool"],
+    "expected_destination": "company"
+  },
+  {
+    "id": "execution-nav-004",
+    "category": "calendar_navigation_success",
+    "user_input": "明天早上先看我的会议，再帮我安排出门",
+    "supported": true,
+    "expected_continuation_tools": ["navigation_tool"],
+    "expected_executed_continuation_tools": ["navigation_tool"],
+    "expected_destination": "company"
+  },
+  {
+    "id": "execution-weather-nav-001",
+    "category": "calendar_weather_navigation_success",
+    "user_input": "明早看一下第一场会议，顺便看天气，再规划怎么过去",
+    "supported": true,
+    "expected_continuation_tools": ["weather_tool", "navigation_tool"],
+    "expected_executed_continuation_tools": ["weather_tool", "navigation_tool"],
+    "expected_destination": "company"
+  },
+  {
+    "id": "execution-weather-nav-002",
+    "category": "calendar_weather_navigation_success",
+    "user_input": "帮我根据明早会议安排出门，也看看会不会下雨",
+    "supported": true,
+    "expected_continuation_tools": ["weather_tool", "navigation_tool"],
+    "expected_executed_continuation_tools": ["weather_tool", "navigation_tool"],
+    "expected_destination": "company"
+  },
+  {
+    "id": "execution-calendar-failure-001",
+    "category": "calendar_failure",
+    "user_input": "帮我安排明早出门",
+    "supported": false,
+    "expected_continuation_tools": [],
+    "expected_executed_continuation_tools": [],
+    "expected_failure_type": "tool_execution_error",
+    "fail_calendar": true
+  },
+  {
+    "id": "execution-validation-failure-001",
+    "category": "continuation_validation_failure",
+    "user_input": "帮我安排明早出门",
+    "supported": false,
+    "expected_continuation_tools": ["navigation_tool"],
+    "expected_executed_continuation_tools": ["navigation_tool"],
+    "expected_failure_type": "continuation_execution_error",
+    "invalid_navigation_arguments": true
+  },
+  {
+    "id": "execution-tool-failure-001",
+    "category": "continuation_tool_failure",
+    "user_input": "帮我根据明早会议安排出门，也看看会不会下雨",
+    "supported": false,
+    "expected_continuation_tools": ["weather_tool", "navigation_tool"],
+    "expected_executed_continuation_tools": ["weather_tool"],
+    "expected_failure_type": "continuation_execution_error",
+    "fail_weather": true
+  },
+  {
+    "id": "execution-grounding-failure-001",
+    "category": "grounding_failure",
+    "user_input": "帮我安排明早出门",
+    "supported": false,
+    "expected_continuation_tools": ["navigation_tool"],
+    "expected_executed_continuation_tools": [],
+    "expected_failure_type": "observation_grounding_error",
+    "override_navigation_destination": "office"
+  }
+]

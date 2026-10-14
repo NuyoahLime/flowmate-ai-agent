@@ -1,0 +1,124 @@
+[
+  {
+    "id": "dynamic-nav-001",
+    "category": "dynamic_navigation_supported",
+    "user_input": "帮我安排明早出门",
+    "supported": true,
+    "expected_initial_tool": "calendar_tool",
+    "expected_continuation_tools": ["navigation_tool"],
+    "expected_destination": "company"
+  },
+  {
+    "id": "dynamic-nav-002",
+    "category": "dynamic_navigation_supported",
+    "user_input": "看一下明早第一场会议，然后帮我规划怎么过去",
+    "supported": true,
+    "expected_initial_tool": "calendar_tool",
+    "expected_continuation_tools": ["navigation_tool"],
+    "expected_destination": "company"
+  },
+  {
+    "id": "dynamic-nav-003",
+    "category": "dynamic_navigation_supported",
+    "user_input": "根据明早日程帮我安排通勤路线",
+    "supported": true,
+    "expected_initial_tool": "calendar_tool",
+    "expected_continuation_tools": ["navigation_tool"],
+    "expected_destination": "company"
+  },
+  {
+    "id": "dynamic-nav-004",
+    "category": "dynamic_navigation_supported",
+    "user_input": "明天早上先看我的会议，再帮我安排出门",
+    "supported": true,
+    "expected_initial_tool": "calendar_tool",
+    "expected_continuation_tools": ["navigation_tool"],
+    "expected_destination": "company"
+  },
+  {
+    "id": "dynamic-weather-nav-001",
+    "category": "dynamic_weather_navigation_supported",
+    "user_input": "明早看一下第一场会议，顺便看天气，再规划怎么过去",
+    "supported": true,
+    "expected_initial_tool": "calendar_tool",
+    "expected_continuation_tools": ["weather_tool", "navigation_tool"],
+    "expected_destination": "company"
+  },
+  {
+    "id": "dynamic-weather-nav-002",
+    "category": "dynamic_weather_navigation_supported",
+    "user_input": "帮我根据明早会议安排出门，也看看会不会下雨",
+    "supported": true,
+    "expected_initial_tool": "calendar_tool",
+    "expected_continuation_tools": ["weather_tool", "navigation_tool"],
+    "expected_destination": "company"
+  },
+  {
+    "id": "dynamic-no-event-001",
+    "category": "no_event_failure",
+    "user_input": "明早如果有会议就帮我安排怎么过去",
+    "supported": false,
+    "expected_initial_tool": "calendar_tool",
+    "expected_continuation_tools": [],
+    "expected_failure_type": "no_calendar_event",
+    "mock_calendar_result": {
+      "events": [],
+      "event_count": 0
+    }
+  },
+  {
+    "id": "dynamic-no-event-002",
+    "category": "no_event_failure",
+    "user_input": "帮我根据明早第一场会议规划通勤",
+    "supported": false,
+    "expected_initial_tool": "calendar_tool",
+    "expected_continuation_tools": [],
+    "expected_failure_type": "no_calendar_event",
+    "mock_calendar_result": {
+      "events": [],
+      "event_count": 0
+    }
+  },
+  {
+    "id": "dynamic-missing-location-001",
+    "category": "missing_location_failure",
+    "user_input": "明早第一场会议后帮我安排怎么过去",
+    "supported": false,
+    "expected_initial_tool": "calendar_tool",
+    "expected_continuation_tools": [],
+    "expected_failure_type": "missing_event_location",
+    "mock_calendar_result": {
+      "events": [
+        {
+          "id": "event-no-location-001",
+          "title": "Private Meeting",
+          "start_time": "08:30",
+          "end_time": "09:30",
+          "location": null
+        }
+      ],
+      "event_count": 1
+    }
+  },
+  {
+    "id": "dynamic-missing-location-002",
+    "category": "missing_location_failure",
+    "user_input": "根据明早日程安排出门路线",
+    "supported": false,
+    "expected_initial_tool": "calendar_tool",
+    "expected_continuation_tools": [],
+    "expected_failure_type": "missing_event_location",
+    "mock_calendar_result": {
+      "events": [
+        {
+          "id": "event-no-location-002",
+          "title": "Focus Block",
+          "start_time": "08:00",
+          "end_time": "09:00",
+          "location": null
+        }
+      ],
+      "event_count": 1
+    }
+  }
+]

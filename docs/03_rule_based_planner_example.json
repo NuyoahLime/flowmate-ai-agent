@@ -1,0 +1,49 @@
+{
+  "user_input": "我明天早上八点半在公司开会，帮我安排好明早出门",
+  "task": {
+    "id": "task-example-morning-commute",
+    "user_input": "我明天早上八点半在公司开会，帮我安排好明早出门",
+    "goal": "安排明早通勤，确保按时到达公司",
+    "status": "PLANNED",
+    "risk_level": "LOW",
+    "requires_confirmation": false,
+    "confirmation_status": "NOT_REQUIRED",
+    "steps": [
+      {
+        "id": "step-weather-example",
+        "order": 1,
+        "description": "检查明早天气",
+        "tool_name": "weather_tool",
+        "tool_call": {
+          "tool_name": "weather_tool",
+          "arguments": {
+            "location": "current_city",
+            "date": "tomorrow"
+          },
+          "status": "PENDING",
+          "result": null,
+          "error": null
+        },
+        "status": "PENDING"
+      },
+      {
+        "id": "step-navigation-example",
+        "order": 2,
+        "description": "计算到公司的通勤时间",
+        "tool_name": "navigation_tool",
+        "tool_call": {
+          "tool_name": "navigation_tool",
+          "arguments": {
+            "origin": "home",
+            "destination": "company",
+            "departure_time": "tomorrow morning"
+          },
+          "status": "PENDING",
+          "result": null,
+          "error": null
+        },
+        "status": "PENDING"
+      }
+    ]
+  }
+}

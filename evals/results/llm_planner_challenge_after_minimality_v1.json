@@ -1,0 +1,271 @@
+{
+  "planner_name": "LLMPlanner",
+  "dataset": "evals\\planner_challenge_v1.json",
+  "metrics": {
+    "cases": 8,
+    "scenario_accuracy": 1.0,
+    "tool_selection_accuracy": 1.0,
+    "parameter_accuracy": 1.0,
+    "unsupported_accuracy": 1.0,
+    "schema_valid_rate": 1.0,
+    "extra_tool_rate": 0.0
+  },
+  "results": [
+    {
+      "case_id": "challenge-supported-001",
+      "category": "morning_commute_paraphrase",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明早八点半得准时到办公室，帮我看看出发前天气和路上需要多久。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    },
+    {
+      "case_id": "challenge-supported-002",
+      "category": "morning_commute_paraphrase",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "上午有个重要会议，我得提前到单位，帮我安排一下早上的行程。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    },
+    {
+      "case_id": "challenge-supported-003",
+      "category": "morning_commute_paraphrase",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明早我要准时抵达办公地点，出发前看看天气和路程情况。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    },
+    {
+      "case_id": "challenge-supported-004",
+      "category": "morning_commute_paraphrase",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明天上午需要去办公室参加会议，帮我规划一下早上的出行。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "extra_tool_case": false,
+      "error": null
+    },
+    {
+      "case_id": "challenge-hard-negative-001",
+      "category": "unsupported_hard_negative",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "公司通知明天不用上班。",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "用户仅告知公司通知明天不用上班，未提出可通过可用工具执行的目标（如查询天气或规划路线），且工具无法处理日历或计划变更。"
+    },
+    {
+      "case_id": "challenge-hard-negative-002",
+      "category": "unsupported_hard_negative",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "我想了解“通勤”是什么意思。",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "该请求是询问词语含义，属于信息查询，weather_tool 和 navigation_tool 均无法提供词语解释。"
+    },
+    {
+      "case_id": "challenge-hard-negative-003",
+      "category": "unsupported_hard_negative",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "我们开会讨论一下公司的通勤制度。",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "The user request is to schedule/conduct a meeting to discuss the company commute policy, which cannot be accomplished with the available weather_tool or navigation_tool. These tools cannot manage meetings, calendars, or discussions."
+    },
+    {
+      "case_id": "challenge-hard-negative-004",
+      "category": "unsupported_hard_negative",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "我已经到公司了，不需要安排出门。",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "extra_tool_case": false,
+      "error": "User indicated they have already arrived at the company and do not need commute planning."
+    }
+  ]
+}

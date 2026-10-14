@@ -1,0 +1,116 @@
+[
+  {
+    "id": "boundary-supported-001",
+    "category": "vehicle_information",
+    "user_input": "帮我规划一下明早开车去公司的路线",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "boundary-supported-002",
+    "category": "vehicle_information",
+    "user_input": "我自己开车去公司，看看大概需要多久",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "boundary-supported-003",
+    "category": "vehicle_information",
+    "user_input": "明早开车上班前帮我查一下天气和路况",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      },
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "boundary-supported-004",
+    "category": "vehicle_information",
+    "user_input": "帮我看看从家到公司的驾车路线",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "boundary-supported-005",
+    "category": "vehicle_information",
+    "user_input": "我要自己开车去单位，帮我估一下通勤时间",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "boundary-unsupported-001",
+    "category": "vehicle_control",
+    "user_input": "帮我把车开到公司楼下",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "boundary-unsupported-002",
+    "category": "vehicle_control",
+    "user_input": "把我的车从停车场开出来",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "boundary-unsupported-003",
+    "category": "vehicle_control",
+    "user_input": "提前启动汽车空调",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "boundary-unsupported-004",
+    "category": "vehicle_control",
+    "user_input": "帮我锁一下车",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  },
+  {
+    "id": "boundary-unsupported-005",
+    "category": "vehicle_control",
+    "user_input": "把车窗关上",
+    "supported": false,
+    "expected_tools": [],
+    "expected_arguments": {}
+  }
+]

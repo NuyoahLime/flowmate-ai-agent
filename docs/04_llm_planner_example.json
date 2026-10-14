@@ -1,0 +1,46 @@
+{
+  "user_input": "我明天早上八点半在公司开会，帮我安排好明早出门",
+  "llm_structured_output": {
+    "unsupported": false,
+    "reason": null,
+    "plan": {
+      "goal": "安排明早通勤，确保按时到达公司参加会议",
+      "risk_level": "LOW",
+      "requires_confirmation": false,
+      "steps": [
+        {
+          "order": 1,
+          "description": "检查明早天气",
+          "tool_name": "weather_tool",
+          "arguments": {
+            "location": "current_city",
+            "date": "tomorrow"
+          }
+        },
+        {
+          "order": 2,
+          "description": "计算到公司的通勤时间",
+          "tool_name": "navigation_tool",
+          "arguments": {
+            "origin": "home",
+            "destination": "company",
+            "departure_time": "tomorrow morning"
+          }
+        }
+      ]
+    }
+  },
+  "task_notes": {
+    "generated_by_python": [
+      "Task.id",
+      "Task.status",
+      "Task.confirmation_status",
+      "PlanStep.id",
+      "PlanStep.status",
+      "ToolCall.status",
+      "ToolCall.result",
+      "ToolCall.error"
+    ],
+    "not_executed_by_planner": true
+  }
+}

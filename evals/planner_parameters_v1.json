@@ -1,0 +1,179 @@
+[
+  {
+    "id": "parameters-navigation-001",
+    "category": "navigation_required_arguments",
+    "user_input": "明早从家去公司，帮我看看大概要多久。",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "parameters-navigation-002",
+    "category": "navigation_required_arguments",
+    "user_input": "明天早上从家到办公室怎么走？",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "parameters-navigation-003",
+    "category": "navigation_required_arguments",
+    "user_input": "明早我要从家出发去公司，帮我规划路线。",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "parameters-navigation-004",
+    "category": "navigation_required_arguments",
+    "user_input": "明天早晨从家开车去单位大概要多久？",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "parameters-navigation-005",
+    "category": "navigation_required_arguments",
+    "user_input": "明早家里出发到公司，帮我估算通勤时间。",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "parameters-navigation-006",
+    "category": "navigation_required_arguments",
+    "user_input": "明天上午从家去办公地点，帮我算一下路上时间。",
+    "supported": true,
+    "expected_tools": ["navigation_tool"],
+    "expected_arguments": {
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "parameters-weather-001",
+    "category": "weather_required_arguments",
+    "user_input": "查一下明天我所在城市的天气。",
+    "supported": true,
+    "expected_tools": ["weather_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "parameters-weather-002",
+    "category": "weather_required_arguments",
+    "user_input": "看看明天 current_city 会不会下雨。",
+    "supported": true,
+    "expected_tools": ["weather_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "parameters-weather-003",
+    "category": "weather_required_arguments",
+    "user_input": "帮我看看明天这里天气怎么样。",
+    "supported": true,
+    "expected_tools": ["weather_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      }
+    }
+  },
+  {
+    "id": "parameters-combined-001",
+    "category": "combined_required_arguments",
+    "user_input": "明早从家去公司前，帮我看天气并算一下路上多久。",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      },
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "parameters-combined-002",
+    "category": "combined_required_arguments",
+    "user_input": "明天早上从家到办公室，帮我同时查天气和路线。",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      },
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  },
+  {
+    "id": "parameters-combined-003",
+    "category": "combined_required_arguments",
+    "user_input": "明早我要从家出发去公司开会，帮我看天气和通勤时间。",
+    "supported": true,
+    "expected_tools": ["weather_tool", "navigation_tool"],
+    "expected_arguments": {
+      "weather_tool": {
+        "location": "current_city",
+        "date": "tomorrow"
+      },
+      "navigation_tool": {
+        "origin": "home",
+        "destination": "company",
+        "departure_time": "tomorrow morning"
+      }
+    }
+  }
+]

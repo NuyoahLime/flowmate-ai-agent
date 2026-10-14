@@ -1,0 +1,18 @@
+[
+  {"id": "cross-routing-001", "scenario": "routing_success"},
+  {"id": "cross-routing-002", "scenario": "routing_deterministic"},
+  {"id": "cross-routing-003", "scenario": "routing_reason"},
+  {"id": "cross-offline-001", "scenario": "offline_route"},
+  {"id": "cross-offline-002", "scenario": "offline_handoff"},
+  {"id": "cross-capability-001", "scenario": "missing_capability_route"},
+  {"id": "cross-capability-002", "scenario": "missing_capability_handoff"},
+  {"id": "cross-duplicate-001", "scenario": "duplicate_handoff"},
+  {"id": "cross-duplicate-002", "scenario": "duplicate_after_restart"},
+  {"id": "cross-accept-001", "scenario": "accept_idempotency"},
+  {"id": "cross-accept-002", "scenario": "version_conflict"},
+  {"id": "cross-isolation-001", "scenario": "wrong_user_handoff"},
+  {"id": "cross-isolation-002", "scenario": "wrong_user_confirmation"},
+  {"id": "cross-reject-001", "scenario": "reject"},
+  {"id": "cross-restart-001", "scenario": "restart_persistence"},
+  {"id": "cross-confirmation-001", "scenario": "confirmation_consistency"}
+]

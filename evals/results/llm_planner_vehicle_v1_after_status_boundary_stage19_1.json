@@ -1,0 +1,1052 @@
+{
+  "planner_name": "LLMPlanner",
+  "dataset": "evals\\planner_vehicle_v1.json",
+  "max_attempts_per_case": 2,
+  "metrics": {
+    "cases": 24,
+    "scenario_accuracy": 1.0,
+    "supported_recall": 1.0,
+    "unsupported_recall": 1.0,
+    "tool_selection_accuracy": 1.0,
+    "parameter_accuracy": 1.0,
+    "parameter_completeness": 1.0,
+    "temporal_constraint_preservation_rate": null,
+    "unsupported_accuracy": 1.0,
+    "schema_valid_rate": 1.0,
+    "extra_tool_rate": 0.0,
+    "retry_cases": 0,
+    "retry_recovery_rate": null,
+    "total_provider_attempts": 24,
+    "average_provider_attempts_per_case": 1.0,
+    "action_risk_accuracy": 1.0
+  },
+  "category_metrics": {
+    "vehicle_status_supported_recall": 1.0,
+    "vehicle_climate_supported_recall": 1.0,
+    "vehicle_lock_supported_recall": 1.0,
+    "vehicle_unlock_supported_recall": 1.0,
+    "vehicle_movement_unsupported_recall": 1.0,
+    "unsupported_vehicle_action_recall": 1.0,
+    "scheduled_conditional_unsupported_recall": 1.0,
+    "vehicle_minimality_accuracy": 1.0,
+    "action_risk_accuracy": 1.0,
+    "high_risk_classification_accuracy": 1.0
+  },
+  "results": [
+    {
+      "case_id": "vehicle-status-001",
+      "category": "vehicle_status_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "看看我的车现在是什么状态",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "get_status"
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "get_status"
+        }
+      },
+      "expected_risk_level": "LOW",
+      "expected_requires_confirmation": false,
+      "predicted_risk_level": "LOW",
+      "predicted_requires_confirmation": false,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-status-002",
+      "category": "vehicle_status_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "看看我的车是不是锁着",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "get_status"
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "get_status"
+        }
+      },
+      "expected_risk_level": "LOW",
+      "expected_requires_confirmation": false,
+      "predicted_risk_level": "LOW",
+      "predicted_requires_confirmation": false,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-status-003",
+      "category": "vehicle_status_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "查看车辆当前状态",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "get_status"
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "get_status"
+        }
+      },
+      "expected_risk_level": "LOW",
+      "expected_requires_confirmation": false,
+      "predicted_risk_level": "LOW",
+      "predicted_requires_confirmation": false,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-status-004",
+      "category": "vehicle_status_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "查询我的车当前锁定和空调状态",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "get_status"
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "get_status"
+        }
+      },
+      "expected_risk_level": "LOW",
+      "expected_requires_confirmation": false,
+      "predicted_risk_level": "LOW",
+      "predicted_requires_confirmation": false,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-climate-001",
+      "category": "vehicle_climate_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "打开我车里的空调",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "start_climate"
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "start_climate"
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-climate-002",
+      "category": "vehicle_climate_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把车里的空调关掉",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "stop_climate"
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "stop_climate"
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-climate-003",
+      "category": "vehicle_climate_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把车内空调打开并设为24度",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "start_climate",
+          "temperature": 24
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "start_climate",
+          "temperature": 24
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-climate-004",
+      "category": "vehicle_climate_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把车内空调打开到16度",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "start_climate",
+          "temperature": 16
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "start_climate",
+          "temperature": 16
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-climate-005",
+      "category": "vehicle_climate_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把车内空调打开到30度",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "start_climate",
+          "temperature": 30
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "start_climate",
+          "temperature": 30
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-climate-006",
+      "category": "vehicle_climate_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "启动我的车内空调",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "start_climate"
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "start_climate"
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-lock-001",
+      "category": "vehicle_lock_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把我的车锁上",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "lock"
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "lock"
+        }
+      },
+      "expected_risk_level": "HIGH",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "HIGH",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-lock-002",
+      "category": "vehicle_lock_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "锁一下我的车",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "lock"
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "lock"
+        }
+      },
+      "expected_risk_level": "HIGH",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "HIGH",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-lock-003",
+      "category": "vehicle_lock_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "现在把车辆锁定",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "lock"
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "lock"
+        }
+      },
+      "expected_risk_level": "HIGH",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "HIGH",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-unlock-001",
+      "category": "vehicle_unlock_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把我的车解锁",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "unlock"
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "unlock"
+        }
+      },
+      "expected_risk_level": "HIGH",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "HIGH",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-unlock-002",
+      "category": "vehicle_unlock_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "解锁车辆",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "unlock"
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "unlock"
+        }
+      },
+      "expected_risk_level": "HIGH",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "HIGH",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-unlock-003",
+      "category": "vehicle_unlock_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "现在打开我的车锁",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "vehicle_tool"
+      ],
+      "expected_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "unlock"
+        }
+      },
+      "predicted_tools": [
+        "vehicle_tool"
+      ],
+      "predicted_arguments": {
+        "vehicle_tool": {
+          "vehicle_id": "my-car",
+          "action": "unlock"
+        }
+      },
+      "expected_risk_level": "HIGH",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "HIGH",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-movement-001",
+      "category": "vehicle_movement_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把车开到公司门口",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": "将车开到公司门口属于车辆移动控制，超出当前工具能力范围（不支持远程驾驶、召唤或车辆移动）。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-movement-002",
+      "category": "vehicle_movement_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "让车自己过来接我",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": "让车辆自行移动或召唤车辆到用户位置属于远程驾驶/召唤功能，当前工具不支持任何形式的车辆移动、自动驾驶或召唤操作。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-movement-003",
+      "category": "vehicle_movement_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把车挪到楼下",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": "移动车辆属于物理控制操作，当前工具不支持驾驶、移动或召唤车辆。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-action-001",
+      "category": "unsupported_vehicle_action",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "打开车辆后备箱",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": "打开后备箱属于不支持的车辆控制操作，当前仅支持获取状态、锁车、解锁、启动/停止空调。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-action-002",
+      "category": "unsupported_vehicle_action",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "让我的车鸣笛两声",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": "鸣笛属于车辆控制功能，当前 vehicle_tool 仅支持查看状态、锁车、解锁、启动/停止空调，不支持鸣笛操作。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-automation-001",
+      "category": "scheduled_conditional_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明早七点打开车内空调",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": "该请求要求在明早七点定时开启车内空调，属于定时/延迟的车辆控制操作。vehicle_tool 仅支持立即执行的模拟车辆操作（如 start_climate），不支持定时、延迟或条件触发的控制。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-automation-002",
+      "category": "scheduled_conditional_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "如果外面低于5度就打开车内空调",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": "该请求是条件触发的车辆控制（根据外部温度低于5度才启动车内空调），属于受条件约束、依赖运行时结果的动作，且不支持延迟、条件或主动式车辆控制。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "vehicle-minimality-001",
+      "category": "non_vehicle_minimality",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "我自己开车去公司，帮我规划路线",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "navigation_tool"
+      ],
+      "expected_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "predicted_tools": [
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    }
+  ],
+  "note": "Planner-only eval. No Task or Tool execution."
+}

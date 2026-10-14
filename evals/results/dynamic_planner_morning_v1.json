@@ -1,0 +1,289 @@
+{
+  "planner_name": "DynamicTaskOrchestrator",
+  "dataset": "evals\\planner_dynamic_morning_v1.json",
+  "metrics": {
+    "cases": 10,
+    "initial_tool_accuracy": 1.0,
+    "observation_grounding_accuracy": 1.0,
+    "continuation_tool_accuracy": 1.0,
+    "dynamic_completion_rate": 1.0,
+    "safe_failure_rate": 1.0
+  },
+  "results": [
+    {
+      "case_id": "dynamic-nav-001",
+      "category": "dynamic_navigation_supported",
+      "user_input": "帮我安排明早出门",
+      "expected_supported": true,
+      "initial_plan_correct": true,
+      "initial_tool": "calendar_tool",
+      "observation_received": true,
+      "selected_event": {
+        "id": "event-001",
+        "title": "Product Weekly Meeting",
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "location": "company",
+        "description": null
+      },
+      "continuation_generated": true,
+      "expected_continuation_tools": [
+        "navigation_tool"
+      ],
+      "continuation_tools": [
+        "navigation_tool"
+      ],
+      "observation_grounded": true,
+      "final_success": true,
+      "safe_failure": null,
+      "failure_type": null,
+      "error": null,
+      "iteration_count": 2
+    },
+    {
+      "case_id": "dynamic-nav-002",
+      "category": "dynamic_navigation_supported",
+      "user_input": "看一下明早第一场会议，然后帮我规划怎么过去",
+      "expected_supported": true,
+      "initial_plan_correct": true,
+      "initial_tool": "calendar_tool",
+      "observation_received": true,
+      "selected_event": {
+        "id": "event-001",
+        "title": "Product Weekly Meeting",
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "location": "company",
+        "description": null
+      },
+      "continuation_generated": true,
+      "expected_continuation_tools": [
+        "navigation_tool"
+      ],
+      "continuation_tools": [
+        "navigation_tool"
+      ],
+      "observation_grounded": true,
+      "final_success": true,
+      "safe_failure": null,
+      "failure_type": null,
+      "error": null,
+      "iteration_count": 2
+    },
+    {
+      "case_id": "dynamic-nav-003",
+      "category": "dynamic_navigation_supported",
+      "user_input": "根据明早日程帮我安排通勤路线",
+      "expected_supported": true,
+      "initial_plan_correct": true,
+      "initial_tool": "calendar_tool",
+      "observation_received": true,
+      "selected_event": {
+        "id": "event-001",
+        "title": "Product Weekly Meeting",
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "location": "company",
+        "description": null
+      },
+      "continuation_generated": true,
+      "expected_continuation_tools": [
+        "navigation_tool"
+      ],
+      "continuation_tools": [
+        "navigation_tool"
+      ],
+      "observation_grounded": true,
+      "final_success": true,
+      "safe_failure": null,
+      "failure_type": null,
+      "error": null,
+      "iteration_count": 2
+    },
+    {
+      "case_id": "dynamic-nav-004",
+      "category": "dynamic_navigation_supported",
+      "user_input": "明天早上先看我的会议，再帮我安排出门",
+      "expected_supported": true,
+      "initial_plan_correct": true,
+      "initial_tool": "calendar_tool",
+      "observation_received": true,
+      "selected_event": {
+        "id": "event-001",
+        "title": "Product Weekly Meeting",
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "location": "company",
+        "description": null
+      },
+      "continuation_generated": true,
+      "expected_continuation_tools": [
+        "navigation_tool"
+      ],
+      "continuation_tools": [
+        "navigation_tool"
+      ],
+      "observation_grounded": true,
+      "final_success": true,
+      "safe_failure": null,
+      "failure_type": null,
+      "error": null,
+      "iteration_count": 2
+    },
+    {
+      "case_id": "dynamic-weather-nav-001",
+      "category": "dynamic_weather_navigation_supported",
+      "user_input": "明早看一下第一场会议，顺便看天气，再规划怎么过去",
+      "expected_supported": true,
+      "initial_plan_correct": true,
+      "initial_tool": "calendar_tool",
+      "observation_received": true,
+      "selected_event": {
+        "id": "event-001",
+        "title": "Product Weekly Meeting",
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "location": "company",
+        "description": null
+      },
+      "continuation_generated": true,
+      "expected_continuation_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "continuation_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "observation_grounded": true,
+      "final_success": true,
+      "safe_failure": null,
+      "failure_type": null,
+      "error": null,
+      "iteration_count": 2
+    },
+    {
+      "case_id": "dynamic-weather-nav-002",
+      "category": "dynamic_weather_navigation_supported",
+      "user_input": "帮我根据明早会议安排出门，也看看会不会下雨",
+      "expected_supported": true,
+      "initial_plan_correct": true,
+      "initial_tool": "calendar_tool",
+      "observation_received": true,
+      "selected_event": {
+        "id": "event-001",
+        "title": "Product Weekly Meeting",
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "location": "company",
+        "description": null
+      },
+      "continuation_generated": true,
+      "expected_continuation_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "continuation_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "observation_grounded": true,
+      "final_success": true,
+      "safe_failure": null,
+      "failure_type": null,
+      "error": null,
+      "iteration_count": 2
+    },
+    {
+      "case_id": "dynamic-no-event-001",
+      "category": "no_event_failure",
+      "user_input": "明早如果有会议就帮我安排怎么过去",
+      "expected_supported": false,
+      "initial_plan_correct": true,
+      "initial_tool": "calendar_tool",
+      "observation_received": true,
+      "selected_event": null,
+      "continuation_generated": false,
+      "expected_continuation_tools": [],
+      "continuation_tools": [],
+      "observation_grounded": null,
+      "final_success": false,
+      "safe_failure": true,
+      "failure_type": "no_calendar_event",
+      "error": "No morning calendar event found to anchor departure planning.",
+      "iteration_count": 1
+    },
+    {
+      "case_id": "dynamic-no-event-002",
+      "category": "no_event_failure",
+      "user_input": "帮我根据明早第一场会议规划通勤",
+      "expected_supported": false,
+      "initial_plan_correct": true,
+      "initial_tool": "calendar_tool",
+      "observation_received": true,
+      "selected_event": null,
+      "continuation_generated": false,
+      "expected_continuation_tools": [],
+      "continuation_tools": [],
+      "observation_grounded": null,
+      "final_success": false,
+      "safe_failure": true,
+      "failure_type": "no_calendar_event",
+      "error": "No morning calendar event found to anchor departure planning.",
+      "iteration_count": 1
+    },
+    {
+      "case_id": "dynamic-missing-location-001",
+      "category": "missing_location_failure",
+      "user_input": "明早第一场会议后帮我安排怎么过去",
+      "expected_supported": false,
+      "initial_plan_correct": true,
+      "initial_tool": "calendar_tool",
+      "observation_received": true,
+      "selected_event": {
+        "id": "event-no-location-001",
+        "title": "Private Meeting",
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "location": null,
+        "description": null
+      },
+      "continuation_generated": false,
+      "expected_continuation_tools": [],
+      "continuation_tools": [],
+      "observation_grounded": null,
+      "final_success": false,
+      "safe_failure": true,
+      "failure_type": "missing_event_location",
+      "error": "Calendar event has no location required for navigation planning.",
+      "iteration_count": 1
+    },
+    {
+      "case_id": "dynamic-missing-location-002",
+      "category": "missing_location_failure",
+      "user_input": "根据明早日程安排出门路线",
+      "expected_supported": false,
+      "initial_plan_correct": true,
+      "initial_tool": "calendar_tool",
+      "observation_received": true,
+      "selected_event": {
+        "id": "event-no-location-002",
+        "title": "Focus Block",
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "location": null,
+        "description": null
+      },
+      "continuation_generated": false,
+      "expected_continuation_tools": [],
+      "continuation_tools": [],
+      "observation_grounded": null,
+      "final_success": false,
+      "safe_failure": true,
+      "failure_type": "missing_event_location",
+      "error": "Calendar event has no location required for navigation planning.",
+      "iteration_count": 1
+    }
+  ],
+  "note": "Dynamic eval executes calendar_tool mock to obtain observations. WeatherTool and NavigationTool are not executed."
+}

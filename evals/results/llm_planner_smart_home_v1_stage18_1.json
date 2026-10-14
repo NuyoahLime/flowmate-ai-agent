@@ -1,0 +1,884 @@
+{
+  "planner_name": "LLMPlanner",
+  "dataset": "evals\\planner_smart_home_v1.json",
+  "max_attempts_per_case": 2,
+  "metrics": {
+    "cases": 20,
+    "scenario_accuracy": 1.0,
+    "supported_recall": 1.0,
+    "unsupported_recall": 1.0,
+    "tool_selection_accuracy": 1.0,
+    "parameter_accuracy": 0.9743589743589743,
+    "parameter_completeness": 1.0,
+    "temporal_constraint_preservation_rate": null,
+    "unsupported_accuracy": 1.0,
+    "schema_valid_rate": 1.0,
+    "extra_tool_rate": 0.0,
+    "retry_cases": 0,
+    "retry_recovery_rate": null,
+    "total_provider_attempts": 20,
+    "average_provider_attempts_per_case": 1.0,
+    "action_risk_accuracy": 1.0
+  },
+  "category_metrics": {
+    "smart_home_supported_recall": 1.0,
+    "unsupported_device_recall": 1.0,
+    "scheduled_automation_unsupported_recall": 1.0,
+    "conditional_automation_unsupported_recall": 1.0,
+    "smart_home_minimality_accuracy": 1.0,
+    "action_risk_accuracy": 1.0
+  },
+  "results": [
+    {
+      "case_id": "smart-home-light-001",
+      "category": "light_control_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把客厅灯打开",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "smart_home_tool"
+      ],
+      "expected_arguments": {
+        "smart_home_tool": {
+          "device_id": "living-room-light",
+          "device_type": "light",
+          "action": "turn_on"
+        }
+      },
+      "predicted_tools": [
+        "smart_home_tool"
+      ],
+      "predicted_arguments": {
+        "smart_home_tool": {
+          "device_id": "living-room-light",
+          "device_type": "light",
+          "action": "turn_on"
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-light-002",
+      "category": "light_control_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把客厅灯关掉",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "smart_home_tool"
+      ],
+      "expected_arguments": {
+        "smart_home_tool": {
+          "device_id": "living-room-light",
+          "device_type": "light",
+          "action": "turn_off"
+        }
+      },
+      "predicted_tools": [
+        "smart_home_tool"
+      ],
+      "predicted_arguments": {
+        "smart_home_tool": {
+          "device_id": "living-room-light",
+          "device_type": "light",
+          "action": "turn_off"
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-light-003",
+      "category": "light_control_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "打开卧室灯",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "smart_home_tool"
+      ],
+      "expected_arguments": {
+        "smart_home_tool": {
+          "device_id": "bedroom-light",
+          "device_type": "light",
+          "action": "turn_on"
+        }
+      },
+      "predicted_tools": [
+        "smart_home_tool"
+      ],
+      "predicted_arguments": {
+        "smart_home_tool": {
+          "device_id": "bedroom-light",
+          "device_type": "light",
+          "action": "turn_on"
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-light-004",
+      "category": "light_control_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "关闭书房灯",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "smart_home_tool"
+      ],
+      "expected_arguments": {
+        "smart_home_tool": {
+          "device_id": "study-room-light",
+          "device_type": "light",
+          "action": "turn_off"
+        }
+      },
+      "predicted_tools": [
+        "smart_home_tool"
+      ],
+      "predicted_arguments": {
+        "smart_home_tool": {
+          "device_id": "study-room-light",
+          "device_type": "light",
+          "action": "turn_off"
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-ac-001",
+      "category": "air_conditioner_control_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "打开卧室空调",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "smart_home_tool"
+      ],
+      "expected_arguments": {
+        "smart_home_tool": {
+          "device_id": "bedroom-ac",
+          "device_type": "air_conditioner",
+          "action": "turn_on"
+        }
+      },
+      "predicted_tools": [
+        "smart_home_tool"
+      ],
+      "predicted_arguments": {
+        "smart_home_tool": {
+          "device_id": "bedroom-ac",
+          "device_type": "air_conditioner",
+          "action": "turn_on"
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-ac-002",
+      "category": "air_conditioner_control_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "关闭卧室空调",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "smart_home_tool"
+      ],
+      "expected_arguments": {
+        "smart_home_tool": {
+          "device_id": "bedroom-ac",
+          "device_type": "air_conditioner",
+          "action": "turn_off"
+        }
+      },
+      "predicted_tools": [
+        "smart_home_tool"
+      ],
+      "predicted_arguments": {
+        "smart_home_tool": {
+          "device_id": "bedroom-ac",
+          "device_type": "air_conditioner",
+          "action": "turn_off"
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-ac-003",
+      "category": "air_conditioner_control_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把卧室空调调到24度",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "smart_home_tool"
+      ],
+      "expected_arguments": {
+        "smart_home_tool": {
+          "device_id": "bedroom-ac",
+          "device_type": "air_conditioner",
+          "action": "set_temperature",
+          "value": 24
+        }
+      },
+      "predicted_tools": [
+        "smart_home_tool"
+      ],
+      "predicted_arguments": {
+        "smart_home_tool": {
+          "device_id": "bedroom-ac",
+          "device_type": "air_conditioner",
+          "action": "set_temperature",
+          "value": 24
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-ac-004",
+      "category": "air_conditioner_control_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把客厅空调调到26度",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "smart_home_tool"
+      ],
+      "expected_arguments": {
+        "smart_home_tool": {
+          "device_id": "living-room-ac",
+          "device_type": "air_conditioner",
+          "action": "set_temperature",
+          "value": 26
+        }
+      },
+      "predicted_tools": [
+        "smart_home_tool"
+      ],
+      "predicted_arguments": {
+        "smart_home_tool": {
+          "device_id": "living-room-ac",
+          "device_type": "air_conditioner",
+          "action": "set_temperature",
+          "value": 26
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-ac-005",
+      "category": "air_conditioner_control_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把卧室空调设置为16度",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "smart_home_tool"
+      ],
+      "expected_arguments": {
+        "smart_home_tool": {
+          "device_id": "bedroom-ac",
+          "device_type": "air_conditioner",
+          "action": "set_temperature",
+          "value": 16
+        }
+      },
+      "predicted_tools": [
+        "smart_home_tool"
+      ],
+      "predicted_arguments": {
+        "smart_home_tool": {
+          "device_id": "bedroom-ac",
+          "device_type": "air_conditioner",
+          "action": "set_temperature",
+          "value": 16
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-ac-006",
+      "category": "air_conditioner_control_supported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把客厅空调设置为30度",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "smart_home_tool"
+      ],
+      "expected_arguments": {
+        "smart_home_tool": {
+          "device_id": "living-room-ac",
+          "device_type": "air_conditioner",
+          "action": "set_temperature",
+          "value": 30
+        }
+      },
+      "predicted_tools": [
+        "smart_home_tool"
+      ],
+      "predicted_arguments": {
+        "smart_home_tool": {
+          "device_id": "living-room-ac",
+          "device_type": "air_conditioner",
+          "action": "set_temperature",
+          "value": 30
+        }
+      },
+      "expected_risk_level": "MEDIUM",
+      "expected_requires_confirmation": true,
+      "predicted_risk_level": "MEDIUM",
+      "predicted_requires_confirmation": true,
+      "risk_assessment_correct": true,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-device-001",
+      "category": "unsupported_device",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把窗帘关上",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": "窗帘是智能家居工具不支持控制的设备类型；智能家居工具仅支持灯和空调的即时模拟控制。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-device-002",
+      "category": "unsupported_device",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "打开电视",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": "电视不受支持，智能家居工具仅支持灯和空调的即时控制。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-device-003",
+      "category": "unsupported_device",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "把门锁上",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": "门锁是不支持的智能家居设备，smart_home_tool仅支持灯和空调的特定操作。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-scheduled-001",
+      "category": "scheduled_automation_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "晚上十点把客厅灯关掉",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": "Scheduled smart-home control is not supported. Only immediate control of supported devices is available, and the request specifies a delayed action at 10 PM.",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-scheduled-002",
+      "category": "scheduled_automation_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "半小时后打开卧室空调",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": "定时或延迟的智能家居控制不受支持（仅支持立即执行）。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-conditional-001",
+      "category": "conditional_automation_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "如果房间超过30度就开卧室空调",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": "Conditional smart-home requests are unsupported. The request to turn on the bedroom air conditioner only if the room exceeds 30 degrees requires temperature monitoring and conditional control, which the available tools cannot perform.",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-conditional-002",
+      "category": "conditional_automation_unsupported",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "如果我到家就开客厅灯",
+      "expected_supported": false,
+      "predicted_supported": false,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": null,
+      "parameter_completeness": null,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [],
+      "expected_arguments": {},
+      "predicted_tools": [],
+      "predicted_arguments": {},
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": "条件触发的智能家居控制（到家后开客厅灯）不受支持；仅支持对明确指定的设备进行即时控制。",
+      "failure_stage": "capability_or_unsupported",
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-minimality-001",
+      "category": "non_smart_home_minimality",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "明天会下雨吗？",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "weather_tool"
+      ],
+      "expected_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        }
+      },
+      "predicted_tools": [
+        "weather_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        }
+      },
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-minimality-002",
+      "category": "non_smart_home_minimality",
+      "failure_type": null,
+      "planner_name": "LLMPlanner",
+      "user_input": "帮我看看明天的会议安排",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 1.0,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "calendar_tool"
+      ],
+      "expected_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow"
+        }
+      },
+      "predicted_tools": [
+        "calendar_tool"
+      ],
+      "predicted_arguments": {
+        "calendar_tool": {
+          "date": "tomorrow"
+        }
+      },
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    },
+    {
+      "case_id": "smart-home-minimality-003",
+      "category": "non_smart_home_minimality",
+      "failure_type": "parameter_value_error",
+      "planner_name": "LLMPlanner",
+      "user_input": "现在给我发通知，标题是 Task done，内容是任务已完成。",
+      "expected_supported": true,
+      "predicted_supported": true,
+      "scenario_correct": true,
+      "tool_selection_correct": true,
+      "parameter_accuracy": 0.6666666666666666,
+      "parameter_completeness": 1.0,
+      "temporal_constraint_preserved": null,
+      "schema_valid": true,
+      "expected_tools": [
+        "notification_tool"
+      ],
+      "expected_arguments": {
+        "notification_tool": {
+          "title": "Task done",
+          "message": "任务已完成。",
+          "channel": "mobile"
+        }
+      },
+      "predicted_tools": [
+        "notification_tool"
+      ],
+      "predicted_arguments": {
+        "notification_tool": {
+          "title": "Task done",
+          "message": "任务已完成",
+          "channel": "mobile"
+        }
+      },
+      "expected_risk_level": null,
+      "expected_requires_confirmation": null,
+      "predicted_risk_level": null,
+      "predicted_requires_confirmation": null,
+      "risk_assessment_correct": null,
+      "extra_tool_case": false,
+      "error": null,
+      "failure_stage": null,
+      "provider_error_type": null,
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null
+    }
+  ],
+  "note": "Planner-only eval. No Task or Tool execution."
+}

@@ -1,0 +1,56 @@
+{
+  "planner_name": "LLMPlanner",
+  "case_count": 2,
+  "max_attempts_per_case": 2,
+  "total_provider_attempts": 2,
+  "records": [
+    {
+      "case_id": "commute-008",
+      "dataset": "evals/planner_eval_v1.json",
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null,
+      "final_status": "no_retry_needed",
+      "final_failure_type": null,
+      "predicted_tools": [
+        "weather_tool",
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "weather_tool": {
+          "location": "current_city",
+          "date": "tomorrow"
+        },
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "error": null
+    },
+    {
+      "case_id": "minimality-navigation-004",
+      "dataset": "evals/planner_minimality_v1.json",
+      "attempt_count": 1,
+      "retry_performed": false,
+      "first_provider_error_type": null,
+      "final_provider_error_type": null,
+      "final_status": "no_retry_needed",
+      "final_failure_type": null,
+      "predicted_tools": [
+        "navigation_tool"
+      ],
+      "predicted_arguments": {
+        "navigation_tool": {
+          "origin": "home",
+          "destination": "company",
+          "departure_time": "tomorrow morning"
+        }
+      },
+      "error": null
+    }
+  ],
+  "note": "Planner-only retry validation. No Task or Tool execution."
+}
